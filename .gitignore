@@ -1,0 +1,8 @@
+# IDE & makefile
+.vs
+.idea
+.vscode
+.env
+*.o
+*.exe
+*.h.gch
