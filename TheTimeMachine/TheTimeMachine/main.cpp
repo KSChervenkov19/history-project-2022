@@ -1,6 +1,8 @@
 #include <iostream>
-
+#include "manager.h"
+using namespace std;
 int main()
 {
-    std::cout << "Hello World!\n";
+    manager mainProcess;
+    mainProcess.cli();
 }

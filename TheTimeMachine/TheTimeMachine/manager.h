@@ -6,7 +6,7 @@
 class manager
 {
 	public:
-
+		void cli();
 	private:
 
 };
