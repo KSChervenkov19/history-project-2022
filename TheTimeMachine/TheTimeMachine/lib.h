@@ -16,25 +16,51 @@ namespace ttd
 	class theTimeMachine;
 	enum commands
 	{
-		commands
+		enable
 	};
 	class theTimeMachine
 	{
 	public:
 		bool privilege;
+		bool type;
 		std::string info = "";
 		std::string prefix = "cli>";
 		std::string str = " ";
+		int counter = 0;
+		char ch;
 	public:
 		void getCommand()
 		{
 			std::cout << prefix;
-			while (true)
+			type = true;
+			while (type)
 			{
-				str += getchar();
-				if (str.back() == '\n')
+				ch = _getch();
+				str += ch;
+				std::cout << ch;
+				if (ch == '?')
 				{
-					break;
+					type = false;
+					std::cout << "\ninsert help menu here :D\n";
+					getCommand();
+				}
+				if (ch == '\b')
+				{
+					if(counter > 0)
+					{
+						std::cout << ' ';
+						std::cout << '\b';
+						str.pop_back();
+						counter--;
+					}
+					else
+					{
+						std::cout << '>';
+					}
+				}
+				else
+				{
+					counter++;
 				}
 			}
 		}
