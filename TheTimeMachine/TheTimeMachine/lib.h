@@ -11,6 +11,8 @@
 #pragma endregion
 
 #pragma region ttd_declaration
+#ifndef THETIMEMACHINE
+#define THETIMEMACHINE
 namespace ttd
 {
 	class theTimeMachine;
@@ -29,27 +31,33 @@ namespace ttd
 		int counter = 0;
 		char ch;
 	public:
-		void getCommand()
+		void getLine()
 		{
 			std::cout << prefix;
 			type = true;
 			while (type)
 			{
-				ch = _getch();
+				ch = _getche();
 				str += ch;
-				std::cout << ch;
 				if (ch == '?')
 				{
 					type = false;
 					std::cout << "\ninsert help menu here :D\n";
+					counter = 0;
+					getLine();
+				}
+				if (ch == '\r')
+				{
+					type = false;
 					getCommand();
+					counter = 0;
+					getLine();
 				}
 				if (ch == '\b')
 				{
 					if(counter > 0)
 					{
-						std::cout << ' ';
-						std::cout << '\b';
+						std::cout << ' ' << '\b';
 						str.pop_back();
 						counter--;
 					}
@@ -64,6 +72,12 @@ namespace ttd
 				}
 			}
 		}
+		void getCommand()
+		{
+			std::cout << '\n' << theTimeMachine::str << '\n';
+			theTimeMachine::str.clear();
+		}
 	};
 }
+#endif // THETIMEMACHINE
 #pragma endregion

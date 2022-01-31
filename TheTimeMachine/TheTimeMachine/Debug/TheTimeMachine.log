@@ -1,4 +1,6 @@
-﻿  main.cpp
+﻿  data.cpp
+  dataManager.cpp
   manager.cpp
+  main.cpp
   Generating Code...
   TheTimeMachine.vcxproj -> C:\Users\Kalin\Desktop\Project\hystory-project-2022\TheTimeMachine\Debug\TheTimeMachine.exe

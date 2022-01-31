@@ -2,5 +2,5 @@
 ttd::theTimeMachine mainProcess;
 void manager::cli()
 {
-	mainProcess.getCommand();
+	mainProcess.getLine();
 }
