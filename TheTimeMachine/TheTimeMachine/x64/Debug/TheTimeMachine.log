@@ -1,0 +1,14 @@
+﻿  data.cpp
+  dataManager.cpp
+  main.cpp
+E:\history-project-2022\TheTimeMachine\TheTimeMachine\lib.h(18,2): error C2011: 'ttd::commands': 'enum' type redefinition
+E:\history-project-2022\TheTimeMachine\TheTimeMachine\lib.h(17): message : see declaration of 'ttd::commands'
+E:\history-project-2022\TheTimeMachine\TheTimeMachine\lib.h(22,2): error C2011: 'ttd::theTimeMachine': 'class' type redefinition
+E:\history-project-2022\TheTimeMachine\TheTimeMachine\lib.h(16): message : see declaration of 'ttd::theTimeMachine'
+  manager.cpp
+E:\history-project-2022\TheTimeMachine\TheTimeMachine\lib.h(18,2): error C2011: 'ttd::commands': 'enum' type redefinition
+E:\history-project-2022\TheTimeMachine\TheTimeMachine\lib.h(17): message : see declaration of 'ttd::commands'
+E:\history-project-2022\TheTimeMachine\TheTimeMachine\lib.h(22,2): error C2011: 'ttd::theTimeMachine': 'class' type redefinition
+E:\history-project-2022\TheTimeMachine\TheTimeMachine\lib.h(16): message : see declaration of 'ttd::theTimeMachine'
+E:\history-project-2022\TheTimeMachine\TheTimeMachine\manager.cpp(2,21): error C2079: 'mainProcess' uses undefined class 'ttd::theTimeMachine'
+  Generating Code...
