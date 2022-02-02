@@ -9,6 +9,7 @@
 #include <fstream>
 #include <map>
 #include <algorithm>
+#include <stack>
 #pragma endregion
 
 #pragma region ttd_declaration
@@ -31,6 +32,7 @@ namespace ttd
     int counter = 0;
     char ch;
     std::vector<std::string> words;
+    std::stack<std::string> stack;
 
   public:
     void getLine()
@@ -53,6 +55,7 @@ namespace ttd
           type = false;
           std::cout << '\n';
           str.pop_back();
+          stack.push(str);
           getCommand();
           counter = 0;
           getLine();
@@ -67,13 +70,26 @@ namespace ttd
           }
           else
           {
-            std::cout << ((privilege)?'#':'>');
+            std::cout << ((privilege) ? '#' : '>');
             str.pop_back();
           }
         }
         else
         {
           counter++;
+        }
+        if (ch == 72)
+        {
+          counter -= 2;
+          std::cout << '\b' << ' ' << '\b';
+          getLastCommand();
+        }
+        if (ch == 71 || ch == 73 || ch == 75 || ch == 76 || ch == 77 || ch == 79 || ch == 80 || ch == 81 || ch == 82 || ch == 83)
+        {
+          counter -= 2;
+          std::cout << '\b' << ' ' << '\b';
+          str.pop_back();
+          str.pop_back();
         }
       }
     }
@@ -116,7 +132,7 @@ namespace ttd
         }
         else
         {
-          if(i == commandsVec.size() - 1)
+          if (i == commandsVec.size() - 1)
           {
             std::cout << "% Incorrect command.\n";
           }
@@ -141,6 +157,24 @@ namespace ttd
       commandsVec.clear();
       theTimeMachine::str.clear();
       c = 1;
+    }
+    void getLastCommand()
+    {
+      if(stack.empty())
+      {
+
+      }
+      else
+      {
+        while(counter != 0)
+        {
+          std::cout << '\b' << ' ' << '\b';
+          counter--;
+        }
+        counter += stack.top().size();
+        str = stack.top();
+        std::cout << stack.top();
+      }
     }
   };
 }
