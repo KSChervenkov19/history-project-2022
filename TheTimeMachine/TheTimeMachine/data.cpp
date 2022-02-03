@@ -47,7 +47,7 @@ void data::createBaseNodes()
 	node1->year = 680;
 	node1->outcome = true;
 	node1->description = "Bulgaria (with khan Asparuh as leader) against the Byzantine Empire";
-	node1->goal = "Establishing  territory ownership";
+	node1->reason = "Establishing  territory ownership";
 	node1->area = "Lesser Scythia";
 	node1->next = node2;
 
@@ -56,7 +56,7 @@ void data::createBaseNodes()
 	node2->year = 708;
 	node2->outcome = true;
 	node2->description = "Bulgaria (with khan Tervel as leader) against the Byzantine Empire";
-	node2->goal = "Bulgaria wishes to aid Justinian II to retake his throne";
+	node2->reason = "Bulgaria wishes to aid Justinian II to retake his throne";
 	node2->area = "Lands around Anchialus";
 	node2->next = node3;
 
@@ -65,7 +65,7 @@ void data::createBaseNodes()
 	node3->year = 811;
 	node3->outcome = true;
 	node3->description = "Bulgaria (with khan Krum as leader) against the Byzantine Empire";
-	node3->goal = "Byzantine Empire declares war to expand it's bounderies";
+	node3->reason = "Byzantine Empire declares war to expand it's boundaries";
 	node3->area = "Varbitsa Pass";
 	node3->next = node4;
 
@@ -74,7 +74,7 @@ void data::createBaseNodes()
 	node4->year = 813;
 	node4->outcome = true;
 	node4->description = "Bulgaria (with khan Krum as leader) against the Byzantine Empire";
-	node4->goal = "Byzantine Empire declares war to expand it's bounderies";
+	node4->reason = "Byzantine Empire declares war to expand it's boundaries";
 	node4->area = "Adrianople, present Edirne, Turkey";
 	node4->next = node5;
 
@@ -83,7 +83,7 @@ void data::createBaseNodes()
 	node5->year = 814;
 	node5->outcome = true;
 	node5->description = "Bulgaria (with khan Krum as leader) against the Byzantine Empire";
-	node5->goal = "Byzantine Empire declares war to expand it's bounderies";
+	node5->reason = "Byzantine Empire declares war to expand it's boundaries";
 	node5->area = "Versinikia, present Elhovo";
 	node5->next = node6;
 
@@ -92,7 +92,7 @@ void data::createBaseNodes()
 	node6->year = 920;
 	node6->outcome = true;
 	node6->description = "Bulgaria (with tsar Simeon I as leader) against the Byzantine Empire";
-	node6->goal = "Tsar Simeon wants to expand his influence over the Byzantine Empire";
+	node6->reason = "Tsar Simeon wants to expand his influence over the Byzantine Empire";
 	node6->area = "Pegae, Byzantine Empire";
 	node6->next = node7;
 
@@ -101,7 +101,7 @@ void data::createBaseNodes()
 	node7->year = 986;
 	node7->outcome = true;
 	node7->description = "Bulgaria (with tsar Samuel and Aron as leaders) against the Byzantine Empire";
-	node7->goal = "Tsar Samuel sees an opportunity to expand his territories because of the weak state of the Byzantine empire";
+	node7->reason = "Tsar Samuel sees an opportunity to expand his territories because of the weak state of the Byzantine empire";
 	node7->area = "The mountain pass Trajan's Gate (Trayanovi vrata), Bulgaria";
 	node7->next = node8;
 
@@ -110,7 +110,7 @@ void data::createBaseNodes()
 	node8->year = 995;
 	node8->outcome = true;
 	node8->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node8->goal = "Samuel sees the outcome of his victory at Gates of Trajan and continues on south";
+	node8->reason = "Samuel sees the outcome of his victory at Gates of Trajan and continues on south";
 	node8->area = "Thessalonica, Byzantine Empire";
 	node8->next = node9;
 
@@ -119,7 +119,7 @@ void data::createBaseNodes()
 	node9->year = 1003;
 	node9->outcome = false;
 	node9->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node9->goal = "The successful progress of Basil II's campaign against Bulgaria";
+	node9->reason = "The successful progress of Basil II's campaign against Bulgaria";
 	node9->area = "Skopje, present North Macedonia";
 	node9->next = node10;
 
@@ -128,7 +128,7 @@ void data::createBaseNodes()
 	node10->year = 1014;
 	node10->outcome = true;
 	node10->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node10->goal = "Recovering territories and blocking the Byzantine empire";
+	node10->reason = "Recovering territories and blocking the Byzantine empire";
 	node10->area = "Between Belasica and Plavush, present-day North Macedonia";
 	node10->next = node11;
 }

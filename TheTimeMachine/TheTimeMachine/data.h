@@ -10,7 +10,7 @@ class data
 			int year;
 			bool outcome;
 			std::string description;
-			std::string goal;
+			std::string reason;
 			std::string area;
 			int grayCode;
 			NODE* next;
