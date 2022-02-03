@@ -113,4 +113,22 @@ void data::createBaseNodes()
 	node8->goal = "Samuel sees the outcome of his victory at Gates of Trajan and continues on south";
 	node8->area = "Thessalonica, Byzantine Empire";
 	node8->next = node9;
+
+	node9->id = 9;
+	node9->name = "Battle of Skopje";
+	node9->year = 1003;
+	node9->outcome = false;
+	node9->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node9->goal = "The successful progress of Basil II's campaign against Bulgaria";
+	node9->area = "Skopje, present North Macedonia";
+	node9->next = node10;
+
+	node10->id = 10;
+	node10->name = "Battle of Strumica";
+	node10->year = 1014;
+	node10->outcome = true;
+	node10->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node10->goal = "Recovering territories and blocking the Byzantine empire";
+	node10->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node10->next = node11;
 }
