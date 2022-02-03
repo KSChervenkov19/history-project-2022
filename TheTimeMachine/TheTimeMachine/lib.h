@@ -49,7 +49,9 @@ namespace ttd
         if (ch == '?')
         {
           type = false;
-          std::cout << "\ninsert help menu here :D\n";
+          std::cout << '\n';
+          str.pop_back();
+          getHelp();
           counter = 0;
           getLine();
         }
@@ -140,7 +142,7 @@ namespace ttd
         {
           if (i == commandsVec.size() - 1)
           {
-            std::cout << "% Incorrect command.\n";
+            std::cout << ((str == "")?"":"% Incorrect command.\n");
           }
           c++;
         }
@@ -155,6 +157,7 @@ namespace ttd
       case 2:
         prefix = "cli>";
         privilege = false;
+        break;
 
       case 3:
         if(words.size() > 1)
@@ -201,6 +204,7 @@ namespace ttd
         {
           std::cout << "% Incomplete command.\n";
         }
+        break;
 
       default:
         break;
@@ -229,6 +233,127 @@ namespace ttd
         str = stack.top();
         std::cout << stack.top();
       }
+    }
+    void getHelp()
+    {
+      int c = 1;
+      std::string temp = "";
+      std::string vecTemp = "";
+      for (int i = 0; i < str.length(); ++i)
+      {
+        if (str[i] == ' ')
+        {
+          words.push_back(temp);
+          temp = "";
+        }
+        else
+        {
+          temp.push_back(str[i]);
+        }
+      }
+      for (int i = 0; i < commands.length(); ++i)
+      {
+        if (commands[i] == ' ')
+        {
+          commandsVec.push_back(vecTemp);
+          vecTemp = "";
+        }
+        else
+        {
+          vecTemp.push_back(commands[i]);
+        }
+      }
+      commandsVec.push_back(vecTemp);
+      words.push_back(temp);
+      if(words[0] == "")
+      {
+        for (int i = 0; i < commandsVec.size(); ++i)
+        {
+          std::cout << "  " << commandsVec[i] << '\n';
+        }
+      }
+      else
+      {
+        for (int i = 0; i < commandsVec.size(); ++i)
+        {
+          if (words[0] == commandsVec[i])
+          {
+            break;
+          }
+          else
+          {
+            if (i == commandsVec.size() - 1)
+            {
+              std::cout << "% Incorrect command.\n";
+            }
+            c++;
+          }
+        }
+      }
+      switch (c)
+      {
+      case 1:
+        std::cout << "  <cr>\n";
+        break;
+
+      case 2:
+        std::cout << "  <cr>\n";
+        break;
+
+      case 3:
+        if(words.size() > 1)
+        {
+          if (words[1] == "year")
+          {
+            if(words.size() > 2)
+            {
+              std::cout << "  NUMBER  Year of the battle\n";
+            }
+            else
+            {
+              std::cout << "  year\n  name\n  outcome\n";
+            }
+          }
+          else if(words[1] == "name")
+          {
+            if(words.size() > 2)
+            {
+              std::cout << "  WORD  Name of the battle\n";
+            }
+            else
+            {
+              std::cout << "  year\n  name\n  outcome\n";
+            }
+          }
+          else if(words[1] == "outcome")
+          {
+            if(words.size() > 2)
+            {
+              std::cout << "  Win/Loss  Outcome of the battle\n";
+            }
+            else
+            {
+              std::cout << "  year\n  name\n  outcome\n";
+            }
+          }
+          else
+          {
+            std::cout << "  year\n  name\n  outcome\n";
+          }
+        }
+        else
+        {
+          std::cout << "  search\n";
+        }
+        break;
+
+      default:
+        break;
+      }
+      words.clear();
+      commandsVec.clear();
+      theTimeMachine::str.clear();
+      c = 1;
     }
   };
 }
