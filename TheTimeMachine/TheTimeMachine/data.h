@@ -12,6 +12,7 @@ class data
 			std::string description;
 			std::string goal;
 			std::string area;
+			int grayCode;
 			NODE* next;
 		};
 
