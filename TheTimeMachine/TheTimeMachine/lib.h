@@ -50,21 +50,12 @@ namespace ttd
           counter = 0;
           getLine();
         }
-        if (ch == '\r')
-        {
-          type = false;
-          std::cout << '\n';
-          str.pop_back();
-          stack.push(str);
-          getCommand();
-          counter = 0;
-          getLine();
-        }
         if (ch == '\b')
         {
           if (counter > 0)
           {
             std::cout << ' ' << '\b';
+            str.pop_back();
             str.pop_back();
             counter--;
           }
@@ -78,10 +69,22 @@ namespace ttd
         {
           counter++;
         }
+        if (ch == '\r')
+        {
+          type = false;
+          std::cout << '\n';
+          str.pop_back();
+          stack.push(str);
+          getCommand();
+          counter = 0;
+          getLine();
+        }
         if (ch == 72)
         {
           counter -= 2;
           std::cout << '\b' << ' ' << '\b';
+          str.pop_back();
+          str.pop_back();
           getLastCommand();
         }
         if (ch == 71 || ch == 73 || ch == 75 || ch == 76 || ch == 77 || ch == 79 || ch == 80 || ch == 81 || ch == 82 || ch == 83)
@@ -160,13 +163,15 @@ namespace ttd
     }
     void getLastCommand()
     {
-      if(stack.empty())
+      if (stack.empty())
       {
-
+        std::cout << "\n% There are no signs of last commands used.\n";
+        str.clear();
+        getLine();
       }
       else
       {
-        while(counter != 0)
+        while (counter != 0)
         {
           std::cout << '\b' << ' ' << '\b';
           counter--;
