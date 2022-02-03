@@ -6,9 +6,12 @@ class data
 	public:
 		struct NODE {
 			int id;
-			int year;
 			std::string name;
+			int year;
 			bool outcome;
+			std::string description;
+			std::string goal;
+			std::string area;
 			NODE* next;
 		};
 
