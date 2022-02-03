@@ -20,7 +20,7 @@ namespace ttd
   class theTimeMachine
   {
   public:
-    std::string commands = "enable disable";
+    std::string commands = "enable disable search";
     std::vector<std::string> commandsVec;
 
   public:
@@ -29,6 +29,9 @@ namespace ttd
     std::string info = "";
     std::string prefix = "cli>";
     std::string str = "";
+    std::string year;
+    std::string name;
+    std::string outcome;
     int counter = 0;
     char ch;
     std::vector<std::string> words;
@@ -152,6 +155,52 @@ namespace ttd
       case 2:
         prefix = "cli>";
         privilege = false;
+
+      case 3:
+        if(words.size() > 1)
+        {
+          if (words[1] == "year")
+          {
+            if(words.size() > 2)
+            {
+              year = words[2];
+            }
+            else
+            {
+              std::cout << "% Incomplete command.\n";
+            }
+          }
+          else if(words[1] == "name")
+          {
+            if(words.size() > 2)
+            {
+              name = words[2];
+            }
+            else
+            {
+              std::cout << "% Incomplete command.\n";
+            }
+          }
+          else if(words[1] == "outcome")
+          {
+            if(words.size() > 2)
+            {
+              outcome = words[2];
+            }
+            else
+            {
+              std::cout << "% Incomplete command.\n";
+            }
+          }
+          else
+          {
+            std::cout << "% Invalid input detected at the second index.\n";
+          }
+        }
+        else
+        {
+          std::cout << "% Incomplete command.\n";
+        }
 
       default:
         break;
