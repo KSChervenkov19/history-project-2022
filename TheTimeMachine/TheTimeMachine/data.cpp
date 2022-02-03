@@ -86,4 +86,31 @@ void data::createBaseNodes()
 	node5->goal = "Byzantine Empire declares war to expand it's bounderies";
 	node5->area = "Versinikia, present Elhovo";
 	node5->next = node6;
+
+	node6->id = 6;
+	node6->name = "Battle of Pegae";
+	node6->year = 920;
+	node6->outcome = true;
+	node6->description = "Bulgaria (with tsar Simeon I as leader) against the Byzantine Empire";
+	node6->goal = "Tsar Simeon wants to expand his influence over the Byzantine Empire";
+	node6->area = "Pegae, Byzantine Empire";
+	node6->next = node7;
+
+	node7->id = 7;
+	node7->name = "Battle of the Gates of Trajan";
+	node7->year = 986;
+	node7->outcome = true;
+	node7->description = "Bulgaria (with tsar Samuel and Aron as leaders) against the Byzantine Empire";
+	node7->goal = "Tsar Samuel sees an opportunity to expand his territories because of the weak state of the Byzantine empire";
+	node7->area = "The mountain pass Trajan's Gate (Trayanovi vrata), Bulgaria";
+	node7->next = node8;
+
+	node8->id = 8;
+	node8->name = "Battle of Thessalonica";
+	node8->year = 995;
+	node8->outcome = true;
+	node8->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node8->goal = "Samuel sees the outcome of his victory at Gates of Trajan and continues on south";
+	node8->area = "Thessalonica, Byzantine Empire";
+	node8->next = node9;
 }
