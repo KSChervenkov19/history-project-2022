@@ -56,16 +56,34 @@ void data::createBaseNodes()
 	node2->year = 708;
 	node2->outcome = true;
 	node2->description = "Bulgaria (with khan Tervel as leader) against the Byzantine Empire";
-	node2->goal = "Bulgaria wishes to aid Justinian II to retake his throne.";
+	node2->goal = "Bulgaria wishes to aid Justinian II to retake his throne";
 	node2->area = "Lands around Anchialus";
 	node2->next = node3;
 
 	node3->id = 3;
-	node3->name = "Battle of Anchialus";
-	node3->year = 708;
+	node3->name = "Battle of Varbitsa Pass";
+	node3->year = 811;
 	node3->outcome = true;
-	node3->description = "Bulgaria (with khan Tervel as leader) against the Byzantine Empire";
-	node3->goal = "Bulgaria wishes to aid Justinian II to retake his throne.";
-	node3->area = "Lands around Anchialus";
-	node3->next = node3;
+	node3->description = "Bulgaria (with khan Krum as leader) against the Byzantine Empire";
+	node3->goal = "Byzantine Empire declares war to expand it's bounderies";
+	node3->area = "Varbitsa Pass";
+	node3->next = node4;
+
+	node4->id = 4;
+	node4->name = "Siege of Adrianople";
+	node4->year = 813;
+	node4->outcome = true;
+	node4->description = "Bulgaria (with khan Krum as leader) against the Byzantine Empire";
+	node4->goal = "Byzantine Empire declares war to expand it's bounderies";
+	node4->area = "Adrianople, present Edirne, Turkey";
+	node4->next = node5;
+
+	node5->id = 5;
+	node5->name = "Battle of Versinikia";
+	node5->year = 814;
+	node5->outcome = true;
+	node5->description = "Bulgaria (with khan Krum as leader) against the Byzantine Empire";
+	node5->goal = "Byzantine Empire declares war to expand it's bounderies";
+	node5->area = "Versinikia, present Elhovo";
+	node5->next = node6;
 }
