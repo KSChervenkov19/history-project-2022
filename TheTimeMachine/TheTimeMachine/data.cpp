@@ -180,28 +180,28 @@ void data::createBaseNodes()
 	node16->id = 16;
 	node16->name = "Aprils Uprising";
 	node16->year = 1876;
-	node16->outcome = true;
+	node16->outcome = false;
 	node16->description = "Insurgent activists of BRCC vs Ottoman Empire (as leaders - Georgi Benkovski, Stoyan Zaimov, Panayot Volov, Ilarion Dragostinov, Stefan Stambolov)";
 	node16->reason = "A try to get the attention of Europe and to show that there is a nation that is fighting to survive";
 	node16->area = "Tarnovo (not much happens), Sliven, Vratsa (not much happens), Plovdiv (and the villages around them)";
 	node16->next = node17;
 
 	node17->id = 17;
-	node17->name = "Battle of Strumica";
-	node17->year = 1014;
+	node17->name = "The Battle of Shipka";
+	node17->year = 1877;
 	node17->outcome = true;
-	node17->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node17->reason = "Recovering territories and blocking the Byzantine empire";
-	node17->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node17->description = "Three-day (August 9-11) battle between Russian troops + Bulgarian volunteers (Gen. Stoletov as leader) vs Ottoman Empire";
+	node17->reason = "Holding positions until reinforcements arrive, so as not to lose a key position and progress in the war";
+	node17->area = "Shipka's Pass";
 	node17->next = node18;
 
 	node18->id = 18;
-	node18->name = "Battle of Strumica";
-	node18->year = 1014;
+	node18->name = "The Battle of Slivnitsa";
+	node18->year = 1885;
 	node18->outcome = true;
-	node18->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node18->reason = "Recovering territories and blocking the Byzantine empire";
-	node18->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node18->description = "Serbia is dissatisfied with the unification of the Principality of Bulgaria with Eastern Rumelia and decides to declare war";
+	node18->reason = "To defend Sofia";
+	node18->area = "Nis, Vidin, Pirot, Dragoman, Tsaribrod, Slivnitsa";
 	node18->next = node19;
 
 	node19->id = 19;
