@@ -131,4 +131,103 @@ void data::createBaseNodes()
 	node10->reason = "Recovering territories and blocking the Byzantine empire";
 	node10->area = "Between Belasica and Plavush, present-day North Macedonia";
 	node10->next = node11;
+
+	node11->id = 11;
+	node11->name = "Battle of Strumica";
+	node11->year = 1014;
+	node11->outcome = true;
+	node11->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node11->reason = "Recovering territories and blocking the Byzantine empire";
+	node11->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node11->next = node12;
+
+	node12->id = 12;
+	node12->name = "Battle of Strumica";
+	node12->year = 1014;
+	node12->outcome = true;
+	node12->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node12->reason = "Recovering territories and blocking the Byzantine empire";
+	node12->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node12->next = node13;
+
+	node13->id = 13;
+	node13->name = "Battle of Strumica";
+	node13->year = 1014;
+	node13->outcome = true;
+	node13->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node13->reason = "Recovering territories and blocking the Byzantine empire";
+	node13->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node13->next = node14;
+
+	node14->id = 14;
+	node14->name = "Battle of Strumica";
+	node14->year = 1014;
+	node14->outcome = true;
+	node14->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node14->reason = "Recovering territories and blocking the Byzantine empire";
+	node14->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node14->next = node15;
+
+	node15->id = 15;
+	node15->name = "Battle of Strumica";
+	node15->year = 1014;
+	node15->outcome = true;
+	node15->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node15->reason = "Recovering territories and blocking the Byzantine empire";
+	node15->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node15->next = node16;
+
+	node16->id = 16;
+	node16->name = "Battle of Strumica";
+	node16->year = 1014;
+	node16->outcome = true;
+	node16->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node16->reason = "Recovering territories and blocking the Byzantine empire";
+	node16->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node16->next = node17;
+
+	node17->id = 18;
+	node17->name = "Battle of Strumica";
+	node17->year = 1014;
+	node17->outcome = true;
+	node17->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node17->reason = "Recovering territories and blocking the Byzantine empire";
+	node17->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node17->next = node18;
+
+	node18->id = 18;
+	node18->name = "Battle of Strumica";
+	node18->year = 1014;
+	node18->outcome = true;
+	node18->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node18->reason = "Recovering territories and blocking the Byzantine empire";
+	node18->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node18->next = node19;
+
+	node19->id = 19;
+	node19->name = "Battle of Strumica";
+	node19->year = 1014;
+	node19->outcome = true;
+	node19->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node19->reason = "Recovering territories and blocking the Byzantine empire";
+	node19->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node19->next = node20;
+
+	node20->id = 20;
+	node20->name = "Battle of Strumica";
+	node20->year = 1014;
+	node20->outcome = true;
+	node20->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node20->reason = "Recovering territories and blocking the Byzantine empire";
+	node20->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node20->next = node21;
+
+	node21->id = 21;
+	node21->name = "Battle of Strumica";
+	node21->year = 1014;
+	node21->outcome = true;
+	node21->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
+	node21->reason = "Recovering territories and blocking the Byzantine empire";
+	node21->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node21->next = NULL;
 }
