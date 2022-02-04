@@ -40,7 +40,7 @@ void data::createBaseNodes()
 	NODE* node18 = new NODE;
 	NODE* node19 = new NODE;
 	NODE* node20 = new NODE;
-	NODE* node21 = new NODE;
+
 
 	node1->id = 1;
 	node1->name = "Battle of Ongal";
@@ -178,15 +178,15 @@ void data::createBaseNodes()
 	node15->next = node16;
 
 	node16->id = 16;
-	node16->name = "Battle of Strumica";
-	node16->year = 1014;
+	node16->name = "Aprils Uprising";
+	node16->year = 1876;
 	node16->outcome = true;
-	node16->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node16->reason = "Recovering territories and blocking the Byzantine empire";
-	node16->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node16->description = "Insurgent activists of BRCC vs Ottoman Empire (as leaders - Georgi Benkovski, Stoyan Zaimov, Panayot Volov, Ilarion Dragostinov, Stefan Stambolov)";
+	node16->reason = "A try to get the attention of Europe and to show that there is a nation that is fighting to survive";
+	node16->area = "Tarnovo (not much happens), Sliven, Vratsa (not much happens), Plovdiv (and the villages around them)";
 	node16->next = node17;
 
-	node17->id = 18;
+	node17->id = 17;
 	node17->name = "Battle of Strumica";
 	node17->year = 1014;
 	node17->outcome = true;
@@ -220,14 +220,7 @@ void data::createBaseNodes()
 	node20->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
 	node20->reason = "Recovering territories and blocking the Byzantine empire";
 	node20->area = "Between Belasica and Plavush, present-day North Macedonia";
-	node20->next = node21;
+	node20->next = NULL;
 
-	node21->id = 21;
-	node21->name = "Battle of Strumica";
-	node21->year = 1014;
-	node21->outcome = true;
-	node21->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node21->reason = "Recovering territories and blocking the Byzantine empire";
-	node21->area = "Between Belasica and Plavush, present-day North Macedonia";
-	node21->next = NULL;
+
 }
