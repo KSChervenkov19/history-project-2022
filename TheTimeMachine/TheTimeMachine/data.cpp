@@ -133,30 +133,30 @@ void data::createBaseNodes()
 	node10->next = node11;
 
 	node11->id = 11;
-	node11->name = "Battle of Strumica";
+	node11->name = "Battle of Kleidion";
 	node11->year = 1014;
-	node11->outcome = true;
+	node11->outcome = false;
 	node11->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node11->reason = "Recovering territories and blocking the Byzantine empire";
-	node11->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node11->reason = "To stop the Byzantune Empire from their attack over Bulgaria";
+	node11->area = "Between Belasica and Ograzden, present-day near the village Key in Bulgaria";
 	node11->next = node12;
 
 	node12->id = 12;
-	node12->name = "Battle of Strumica";
-	node12->year = 1014;
+	node12->name = "Battle of Tryavna";
+	node12->year = 1190;
 	node12->outcome = true;
-	node12->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node12->reason = "Recovering territories and blocking the Byzantine empire";
-	node12->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node12->description = "Bulgaria (with Ivan Asen I and Peter I Asen as leaders) against the Byzantine Empire";
+	node12->reason = "Ivan Asen is using the third crusade as an advantage to return some of the teritories to Bulgaria";
+	node12->area = "Tryavna, Bulgaria";
 	node12->next = node13;
 
 	node13->id = 13;
-	node13->name = "Battle of Strumica";
+	node13->name = "Battle of Klokotnitsa";
 	node13->year = 1014;
 	node13->outcome = true;
-	node13->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node13->reason = "Recovering territories and blocking the Byzantine empire";
-	node13->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node13->description = "Bulgaria (with tsar Ivan Asen II as leader) against the Epirus despotism";
+	node13->reason = "To stop Teodor Komnin and his plan to stop Ivan Asen II to advance the relationships of Bulgaria";
+	node13->area = "Between the river Klokotnitsa and the village Klokotnitsa";
 	node13->next = node14;
 
 	node14->id = 14;
