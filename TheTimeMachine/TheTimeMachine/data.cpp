@@ -205,21 +205,21 @@ void data::createBaseNodes()
 	node18->next = node19;
 
 	node19->id = 19;
-	node19->name = "Battle of Strumica";
-	node19->year = 1014;
+	node19->name = "Balkan war";
+	node19->year = 1912-1913;
 	node19->outcome = true;
-	node19->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node19->reason = "Recovering territories and blocking the Byzantine empire";
-	node19->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node19->description = "Balkan Union (Bulgaria, Serbia, Greece, Montenegro) vs Ottoman Empire";
+	node19->reason = "Territorial expansion and return (does not receive them)";
+	node19->area = "-";
 	node19->next = node20;
 
 	node20->id = 20;
-	node20->name = "Battle of Strumica";
-	node20->year = 1014;
-	node20->outcome = true;
-	node20->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node20->reason = "Recovering territories and blocking the Byzantine empire";
-	node20->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node20->name = "First world war (Great war)";
+	node20->year = 1914-1918;
+	node20->outcome = false;
+	node20->description = "Central Forces(Germany, Italy, Austria-Hungary) vs the Entente";
+	node20->reason = "Territorial expansion and return";
+	node20->area = "-";
 	node20->next = NULL;
 
 
