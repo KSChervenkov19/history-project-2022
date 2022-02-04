@@ -152,7 +152,7 @@ void data::createBaseNodes()
 
 	node13->id = 13;
 	node13->name = "Battle of Klokotnitsa";
-	node13->year = 1014;
+	node13->year = 1230;
 	node13->outcome = true;
 	node13->description = "Bulgaria (with tsar Ivan Asen II as leader) against the Epirus despotism";
 	node13->reason = "To stop Teodor Komnin and his plan to stop Ivan Asen II to advance the relationships of Bulgaria";
@@ -160,21 +160,21 @@ void data::createBaseNodes()
 	node13->next = node14;
 
 	node14->id = 14;
-	node14->name = "Battle of Strumica";
-	node14->year = 1014;
+	node14->name = "Battle of Skafida";
+	node14->year = 1304;
 	node14->outcome = true;
-	node14->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node14->reason = "Recovering territories and blocking the Byzantine empire";
-	node14->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node14->description = "Bulgaria (with tsar Teodor Svetoslav as leader) against the Byzantine Empire";
+	node14->reason = "Recovering territories and revenge on Byzantine empire";
+	node14->area = "Near Burgas, Bulgaria";
 	node14->next = node15;
 
 	node15->id = 15;
-	node15->name = "Battle of Strumica";
-	node15->year = 1014;
+	node15->name = "Battle of Rusokastro";
+	node15->year = 1332;
 	node15->outcome = true;
-	node15->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node15->reason = "Recovering territories and blocking the Byzantine empire";
-	node15->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node15->description = "Bulgaria (with tsar Ivan Aleksandar as leader) against the Byzantine Empire";
+	node15->reason = "A try to stop the Byzantine Empire, later he took the opportunity and attacked them";
+	node15->area = "Near Rusokastro";
 	node15->next = node16;
 
 	node16->id = 16;
