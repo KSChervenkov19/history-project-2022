@@ -21,12 +21,13 @@ namespace ttd
   {
   public:
     std::string commands = "enable disable search";
+    std::vector<std::string> privilegeVec = { "add" };
     std::vector<std::string> commandsVec;
 
   public:
     bool privilege = false;
     bool type;
-    std::string info = "";
+    std::string info = "Press ENTER to get started!\n\n";
     std::string prefix = "cli>";
     std::string str = "";
     std::string year;
@@ -236,7 +237,7 @@ namespace ttd
     }
     void getHelp()
     {
-      int c = 1;
+      int c = 0;
       std::string temp = "";
       std::string vecTemp = "";
       for (int i = 0; i < str.length(); ++i)
@@ -271,6 +272,13 @@ namespace ttd
         {
           std::cout << "  " << commandsVec[i] << '\n';
         }
+        if(privilege)
+        {
+            for (int i = 0; i < privilegeVec.size(); ++i)
+            {
+              std::cout << "  " << privilegeVec[i] << '\n';
+            }
+        }
       }
       else
       {
@@ -278,6 +286,7 @@ namespace ttd
         {
           if (words[0] == commandsVec[i])
           {
+            c++;
             break;
           }
           else

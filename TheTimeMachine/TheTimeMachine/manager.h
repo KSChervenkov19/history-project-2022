@@ -5,6 +5,9 @@
 
 class manager
 {
+	public: 
+		bool activate;
+		char ch;
 	public:
 		void cli();
 	private:

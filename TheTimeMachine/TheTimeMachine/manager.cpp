@@ -2,5 +2,12 @@
 ttd::theTimeMachine mainProcess;
 void manager::cli()
 {
-	mainProcess.getLine();
+	std::cout << mainProcess.info;
+	ch = _getch();
+	activate = (ch == '\r') ? true : false;
+	if (activate)
+	{
+		std::cout << '\n';
+		mainProcess.getLine();
+	}
 }
