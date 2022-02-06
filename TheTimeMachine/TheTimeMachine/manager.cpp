@@ -1,6 +1,5 @@
 #include "manager.h"
-ttd::theTimeMachine mainProcess;
-void manager::cli()
+void manager::cli(ttm::theTimeMachine mainProcess)
 {
 	std::cout << mainProcess.info;
 	ch = _getch();

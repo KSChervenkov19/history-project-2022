@@ -12,22 +12,22 @@
 #include <stack>
 #pragma endregion
 
-#pragma region ttd_declaration
+#pragma region ttm_declaration
 #ifndef THETIMEMACHINE
 #define THETIMEMACHINE
-namespace ttd
+
+namespace ttm
 {
   class theTimeMachine
   {
   public:
-    std::string commands = "enable disable search";
-    std::vector<std::string> privilegeVec = { "add" };
-    std::vector<std::string> commandsVec;
+    const std::vector<std::string> privilegeVec = { "add" };
+    const std::vector<std::string> commandsVec = { "enable", "disable", "search" };
 
   public:
     bool privilege = false;
     bool type;
-    std::string info = "Press ENTER to get started!\n\n";
+    const std::string info = "Press ENTER to get started!\n\n";
     std::string prefix = "cli>";
     std::string str = "";
     std::string year;
@@ -106,7 +106,6 @@ namespace ttd
     {
       int c = 1;
       std::string temp = "";
-      std::string vecTemp = "";
       for (int i = 0; i < str.length(); ++i)
       {
         if (str[i] == ' ')
@@ -119,21 +118,8 @@ namespace ttd
           temp.push_back(str[i]);
         }
       }
-      for (int i = 0; i < commands.length(); ++i)
-      {
-        if (commands[i] == ' ')
-        {
-          commandsVec.push_back(vecTemp);
-          vecTemp = "";
-        }
-        else
-        {
-          vecTemp.push_back(commands[i]);
-        }
-      }
-      commandsVec.push_back(vecTemp);
       words.push_back(temp);
-      for (int i = 0; i < commandsVec.size(); ++i)
+      for (size_t i = 0; i < commandsVec.size(); ++i)
       {
         if (words[0] == commandsVec[i])
         {
@@ -143,7 +129,7 @@ namespace ttd
         {
           if (i == commandsVec.size() - 1)
           {
-            std::cout << ((str == "")?"":"% Incorrect command.\n");
+            std::cout << ((str == "")?"":"% Unknown command.\n");
           }
           c++;
         }
@@ -211,7 +197,6 @@ namespace ttd
         break;
       }
       words.clear();
-      commandsVec.clear();
       theTimeMachine::str.clear();
       c = 1;
     }
@@ -237,9 +222,9 @@ namespace ttd
     }
     void getHelp()
     {
+      stack.push(str);
       int c = 0;
       std::string temp = "";
-      std::string vecTemp = "";
       for (int i = 0; i < str.length(); ++i)
       {
         if (str[i] == ' ')
@@ -252,19 +237,6 @@ namespace ttd
           temp.push_back(str[i]);
         }
       }
-      for (int i = 0; i < commands.length(); ++i)
-      {
-        if (commands[i] == ' ')
-        {
-          commandsVec.push_back(vecTemp);
-          vecTemp = "";
-        }
-        else
-        {
-          vecTemp.push_back(commands[i]);
-        }
-      }
-      commandsVec.push_back(vecTemp);
       words.push_back(temp);
       if(words[0] == "")
       {
@@ -293,7 +265,7 @@ namespace ttd
           {
             if (i == commandsVec.size() - 1)
             {
-              std::cout << "% Incorrect command.\n";
+              std::cout << "% Unknown command.\n";
             }
             c++;
           }
@@ -360,7 +332,6 @@ namespace ttd
         break;
       }
       words.clear();
-      commandsVec.clear();
       theTimeMachine::str.clear();
       c = 1;
     }

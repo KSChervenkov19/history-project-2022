@@ -5,11 +5,11 @@
 
 class manager
 {
-	public: 
+	private: 
 		bool activate;
 		char ch;
 	public:
-		void cli();
+		void cli(ttm::theTimeMachine mainProcess);
 	private:
 
 };
