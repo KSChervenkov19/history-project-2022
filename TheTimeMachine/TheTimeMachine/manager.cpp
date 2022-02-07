@@ -9,4 +9,8 @@ void manager::cli(ttm::theTimeMachine mainProcess)
 		std::cout << '\n';
 		mainProcess.getLine();
 	}
+	else
+	{
+		// insert panic logger here
+	}
 }
