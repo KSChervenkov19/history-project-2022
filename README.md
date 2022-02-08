@@ -13,13 +13,13 @@
 
 ## Team
 
-* Kalin Chervenkov
+* Kalin Chervenkov - <KSChervenkov19@codingburgas.bg >
 
-* Tereza Opanska
+* Tereza Opanska - <TNOpanska@codingburgas.bg >
 
-* Dobrin Peychev
+* Dobrin Peychev - <DIPeychev19@codingburgas.bg >
 
-* Nikolai Brankov
+* Nikolai Brankov - <NPBrankov19@codingburgas.bg >
 
 
 ## Description of the project
