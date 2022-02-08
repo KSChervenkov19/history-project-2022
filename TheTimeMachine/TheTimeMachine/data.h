@@ -16,11 +16,6 @@ class data
 			NODE* next;
 		};
 
-		/*
-		private:
-			NODE *head, *tail;
-		*/
-
 	public:
 		void createBaseNodes();
 };

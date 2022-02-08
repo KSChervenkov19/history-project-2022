@@ -2,24 +2,6 @@
 
 void data::createBaseNodes()
 {
-	/*
-	NODE* temp = new NODE;
-	temp->data = n;
-	temp->next = NULL;
-
-	if (head == NULL)
-	{
-		head = temp;
-		tail = temp;
-	}
-
-	else
-	{
-		tail->next = temp;
-		tail = tail->next;
-	}
-	*/
-
 	NODE* node1 = new NODE;
 	NODE* node2 = new NODE;
 	NODE* node3 = new NODE;
