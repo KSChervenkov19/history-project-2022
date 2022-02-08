@@ -1,6 +1,6 @@
 # TheTimeMachine
 
-<img src="" >
+<img src="">
 
 ## Table of content
 
@@ -11,4 +11,22 @@
 * Preview
 
 
+## Team
 
+* Kalin Chervenkov
+
+* Tereza Opanska
+
+* Dobrin Peychev
+
+* Nikolai Brankov
+
+
+## Description of the project
+
+
+
+## Preview
+
+
+<img src="">
