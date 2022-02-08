@@ -37,6 +37,7 @@ namespace ttm
 		char ch;
 		std::vector<std::string> words;
 		std::stack<std::string> stack;
+		std::map<std::string, void(*)(std::string)> commandsMap;
 
 	public:
 		void getLine()
@@ -143,7 +144,7 @@ namespace ttm
 							}
 						}
 					}
-					if (i == commandsVec.size() - 1)
+					if (i == commandsVec.size())
 					{
 						std::cout << ((str == "") ? "" : "% Unknown command.\n");
 					}
@@ -193,7 +194,9 @@ namespace ttm
 				{
 					if (words.size() > 2)
 					{
+						std::cout << year;
 						year = words[2];
+						findEventByYear();
 					}
 					else
 					{
@@ -410,6 +413,14 @@ namespace ttm
 		void addHelp()
 		{
 			std::cout << "yeye\n";
+		}
+
+		void findEventByYear()
+		{
+			std::cout << year;
+			int year2 = std::stoi(year);
+			std::cout << "i a,m workin" << year2;
+			year.clear();
 		}
 	};
 }
