@@ -106,7 +106,7 @@ namespace ttm
 		void getCommand()
 		{
 			std::string temp = "";
-			for (int i = 0; i < str.length(); ++i)
+			for (size_t i = 0; i < str.length(); ++i)
 			{
 				if (str[i] == ' ')
 				{
@@ -265,7 +265,7 @@ namespace ttm
 		{
 			stack.push(str);
 			std::string temp = "";
-			for (int i = 0; i < str.length(); ++i)
+			for (size_t i = 0; i < str.length(); ++i)
 			{
 				if (str[i] == ' ')
 				{
@@ -412,16 +412,17 @@ namespace ttm
 
 		void addHelp()
 		{
-			std::cout << "yeye\n";
+				if (words.size() > 1)
+				{
+					std::cout << "  WORD \"name\"  NUMBER \"year\"  Yes/No \"outcome\"  WORD \"description\"  WORD \"reason\"\n  NOTE: Space each parameter with quotation marks\n";
+				}
+				else
+				{
+					std::cout << "  add\n";
+				}
 		}
 
-		void findEventByYear()
-		{
-			std::cout << year;
-			int year2 = std::stoi(year);
-			std::cout << "i a,m workin" << year2;
-			year.clear();
-		}
+		void findEventByYear();
 	};
 }
 #endif // THETIMEMACHINE
