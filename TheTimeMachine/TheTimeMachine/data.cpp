@@ -137,7 +137,7 @@ void data::createBaseNodes()
 	node13->year = 1230;
 	node13->outcome = true;
 	node13->description = "Bulgaria (with tsar Ivan Asen II as leader) against the Epirus despotism";
-	node13->reason = "To stop Teodor Komnin and his plan to stop Ivan Asen II to advance the relationships of Bulgaria";
+	node13->reason = "To cease Teodor Komnin and his plan to prevent tsar Ivan Asen II of increasing Bulgaria's influence";
 	node13->area = "Between the river Klokotnitsa and the village Klokotnitsa";
 	node13->next = node14;
 
@@ -155,12 +155,12 @@ void data::createBaseNodes()
 	node15->year = 1332;
 	node15->outcome = true;
 	node15->description = "Bulgaria (with tsar Ivan Aleksandar as leader) against the Byzantine Empire";
-	node15->reason = "A try to stop the Byzantine Empire, later he took the opportunity and attacked them";
+	node15->reason = "An attempt to stop the invasion of the Byzantine Empire, which grows into an attack against them";
 	node15->area = "Near Rusokastro";
 	node15->next = node16;
 
 	node16->id = 16;
-	node16->name = "Aprils Uprising";
+	node16->name = "April Uprising";
 	node16->year = 1876;
 	node16->outcome = false;
 	node16->description = "Insurgent activists of BRCC vs Ottoman Empire (as leaders - Georgi Benkovski, Stoyan Zaimov, Panayot Volov, Ilarion Dragostinov, Stefan Stambolov)";
