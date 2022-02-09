@@ -148,13 +148,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="data.cpp" />
-    <ClCompile Include="dataManager.cpp" />
     <ClCompile Include="manager.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="data.h" />
-    <ClInclude Include="dataManager.h" />
     <ClInclude Include="manager.h" />
     <ClInclude Include="lib.h" />
   </ItemGroup>

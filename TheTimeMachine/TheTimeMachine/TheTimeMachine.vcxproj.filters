@@ -18,9 +18,6 @@
     <ClCompile Include="data.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="dataManager.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="manager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -33,9 +30,6 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="lib.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="dataManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="manager.h">
