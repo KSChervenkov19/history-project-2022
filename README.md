@@ -4,11 +4,17 @@
 
 ## Table of content
 
+* About
+
+* Used for creation
+
 * Team
 
-* Description of the project
-
 * Preview
+
+
+## About
+
 
 
 ## Team
@@ -20,10 +26,6 @@
 * Dobrin Peychev - <DIPeychev19@codingburgas.bg>
 
 * Nikolai Brankov - <NPBrankov19@codingburgas.bg>
-
-
-## Description of the project
-
 
 
 ## Preview
