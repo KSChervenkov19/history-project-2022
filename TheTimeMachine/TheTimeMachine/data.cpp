@@ -119,8 +119,8 @@ void data::createBaseNodes()
 	node11->year = 1014;
 	node11->outcome = false;
 	node11->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
-	node11->reason = "To stop the Byzantune Empire from their attack over Bulgaria";
-	node11->area = "Between Belasica and Ograzden, present-day near the village Key in Bulgaria";
+	node11->reason = "To stop the Byzantine Empire from attacking Bulgaria";
+	node11->area = "Between Belasica and Ograzden, near present-day village Klyuch in Bulgaria";
 	node11->next = node12;
 
 	node12->id = 12;
