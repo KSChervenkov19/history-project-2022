@@ -127,8 +127,8 @@ void data::createBaseNodes()
 	node12->name = "Battle of Tryavna";
 	node12->year = 1190;
 	node12->outcome = true;
-	node12->description = "Bulgaria (with Ivan Asen I and Peter I Asen as leaders) against the Byzantine Empire";
-	node12->reason = "Ivan Asen is using the third crusade as an advantage to return some of the teritories to Bulgaria";
+	node12->description = "Bulgaria (with tsar Ivan Asen I and tsar Peter I Asen as leaders) against the Byzantine Empire";
+	node12->reason = "Tsar Ivan Asen I used the third crusade as an advantage to recover lost territories to Bulgaria";
 	node12->area = "Tryavna, Bulgaria";
 	node12->next = node13;
 
