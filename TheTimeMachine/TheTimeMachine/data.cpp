@@ -188,7 +188,7 @@ void data::createBaseNodes()
 
 	node19->id = 19;
 	node19->name = "Balkan War";
-	node19->year = 1912-1913;
+	node19->year = 1912;
 	node19->outcome = true;
 	node19->description = "Balkan Union (Bulgaria, Serbia, Greece, Montenegro) against the Ottoman Empire";
 	node19->reason = "Expanding to new territories and restoration of old ones (unsuccessful)";
@@ -197,10 +197,45 @@ void data::createBaseNodes()
 
 	node20->id = 20;
 	node20->name = "World War I (Great War)";
-	node20->year = 1914-1918;
+	node20->year = 1914;
 	node20->outcome = false;
 	node20->description = "Central Powers (Germany, Italy, Austria-Hungary) against the Entente";
 	node20->reason = "Bulgaria joined the war on 14th October 1915 on the side of the Central Powers, because they were promised territorial compensation";
 	node20->area = "Most of Bulgaria's military campaigns during World War I took place around the border of the country";
 	node20->next = NULL;
+
+	while (node1 != NULL)
+	{
+		events.push_back(node1);
+		node1 = node1->next;
+	}
+}
+
+void data::findEventByYear(int year)
+{
+	closestYear = INT_MAX;
+	for (NODE* event : events)
+	{
+		if (year == event->year)
+		{
+			std::cout << "  Name: " <<event->name << "\n";
+			std::cout << "  Year: " << event->year << "\n";
+			std::cout << "  Description: " << event->description << "\n";
+			std::cout << "  Reason: " << event->reason << "\n";
+			std::cout << "  Won: " << event->outcome << "\n";
+			std::cout << "  Area: " << event->area << "\n";
+			found = true;
+		}
+		else
+		{
+			if (year <= closestYear)
+			{
+				closestYear = year;
+			}
+		}
+	}
+	if (!found)
+	{
+		std::cout << "% Unknown year. Closest year: "<< closestYear << "\n";
+	}
 }

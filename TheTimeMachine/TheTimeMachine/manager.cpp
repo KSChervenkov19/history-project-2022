@@ -1,23 +1,15 @@
 #include "manager.h"
 
-void ttm::theTimeMachine::findEventByYear()
+void manager::cli(ttm::theTimeMachine* mainProcess, data* linkedListData)
 {
-	/*std::cout << mainProcess->year;
-	intYear = std::stoi(mainProcess->year);
-	mainProcess->year.clear();*/
-	std::cout << "yeseyes";
-}
-
-void manager::cli(ttm::theTimeMachine* mainProcess)
-{
+	linkedListData->createBaseNodes();
 	std::cout << mainProcess->info;
 	ch = _getch();
 	activate = (ch == '\r') ? true : false;
 	if (activate)
 	{
 		std::cout << '\n';
-		mainProcess->getLine();
-		mainProcess->findEventByYear();
+		mainProcess->getLine(linkedListData);
 	}
 	else
 	{

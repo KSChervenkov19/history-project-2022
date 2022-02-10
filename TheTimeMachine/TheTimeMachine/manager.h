@@ -10,5 +10,5 @@ class manager
 		int intYear;
 
 	public:
-		void cli(ttm::theTimeMachine* mainProcess);
+		void cli(ttm::theTimeMachine* mainProcess, data* linkedListData);
 };

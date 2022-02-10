@@ -1,21 +1,8 @@
-#pragma region std_includes
-#include <iostream>
-#include <vector>
-#include <string>
-#include <windows.h>
-#include <regex>
-#include <conio.h>
-#include <thread>
-#include <fstream>
-#include <map>
-#include <algorithm>
-#include <stack>
-#pragma endregion
+#include "data.h"
 
 #pragma region ttm_declaration
 #ifndef THETIMEMACHINE
 #define THETIMEMACHINE
-
 namespace ttm
 {
 	class theTimeMachine
@@ -34,13 +21,14 @@ namespace ttm
 		std::string name;
 		std::string outcome;
 		int counter = 0;
+		int intYear;
 		char ch;
 		std::vector<std::string> words;
 		std::stack<std::string> stack;
 		std::map<std::string, void(*)(std::string)> commandsMap;
 
 	public:
-		void getLine()
+		void getLine(data* linkedListData)
 		{
 			std::cout << prefix;
 			typing = true;
@@ -55,7 +43,7 @@ namespace ttm
 					str.pop_back();
 					getHelp();
 					counter = 0;
-					getLine();
+					getLine(linkedListData);
 				}
 				if (ch == '\b')
 				{
@@ -82,9 +70,9 @@ namespace ttm
 					std::cout << '\n';
 					str.pop_back();
 					stack.push(str);
-					getCommand();
+					getCommand(linkedListData);
 					counter = 0;
-					getLine();
+					getLine(linkedListData);
 				}
 				if (ch == 72)
 				{
@@ -92,7 +80,7 @@ namespace ttm
 					std::cout << '\b' << ' ' << '\b';
 					str.pop_back();
 					str.pop_back();
-					getLastCommand();
+					getLastCommand(linkedListData);
 				}
 				if (ch == 71 || ch == 73 || ch == 75 || ch == 76 || ch == 77 || ch == 79 || ch == 80 || ch == 81 || ch == 82 || ch == 83)
 				{
@@ -103,7 +91,7 @@ namespace ttm
 				}
 			}
 		}
-		void getCommand()
+		void getCommand(data* linkedListData)
 		{
 			std::string temp = "";
 			for (size_t i = 0; i < str.length(); ++i)
@@ -127,7 +115,7 @@ namespace ttm
 				i++;
 				if (words[0] == currentWord)
 				{
-					executeCommand(currentWord);
+					executeCommand(currentWord, linkedListData);
 					break;
 				}
 				else
@@ -154,7 +142,7 @@ namespace ttm
 			theTimeMachine::str.clear();
 		}
 
-		void executeCommand(std::string currentWord)
+		void executeCommand(std::string currentWord, data* linkedListData)
 		{
 			if (currentWord == "enable")
 			{
@@ -166,7 +154,7 @@ namespace ttm
 			}
 			else if (currentWord == "search")
 			{
-				search();
+				search(linkedListData);
 			}
 			else if (currentWord == "add")
 			{
@@ -186,7 +174,7 @@ namespace ttm
 			privilege = false;
 		}
 
-		void search()
+		void search(data* linkedListData)
 		{
 			if (words.size() > 1)
 			{
@@ -194,9 +182,9 @@ namespace ttm
 				{
 					if (words.size() > 2)
 					{
-						std::cout << year;
 						year = words[2];
-						findEventByYear();
+						intYear = std::stoi(year);
+						linkedListData->findEventByYear(intYear);
 					}
 					else
 					{
@@ -241,13 +229,13 @@ namespace ttm
 			std::cout << "yeye";
 		}
 
-		void getLastCommand()
+		void getLastCommand(data* linkedListData)
 		{
 			if (stack.empty())
 			{
 				std::cout << "\n% There are no signs of last commands used.\n";
 				str.clear();
-				getLine();
+				getLine(linkedListData);
 			}
 			else
 			{
@@ -421,8 +409,6 @@ namespace ttm
 					std::cout << "  add\n";
 				}
 		}
-
-		void findEventByYear();
 	};
 }
 #endif // THETIMEMACHINE

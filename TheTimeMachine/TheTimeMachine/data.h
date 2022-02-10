@@ -1,5 +1,18 @@
 #pragma once
-#include "lib.h"
+
+#pragma region std_includes
+#include <iostream>
+#include <vector>
+#include <string>
+#include <windows.h>
+#include <regex>
+#include <conio.h>
+#include <thread>
+#include <fstream>
+#include <map>
+#include <algorithm>
+#include <stack>
+#pragma endregion
 
 class data
 {
@@ -15,7 +28,11 @@ class data
 			int grayCode;
 			NODE* next;
 		};
+		std::vector <NODE*> events;
+		int closestYear;
+		bool found;
 
 	public:
 		void createBaseNodes();
+		void findEventByYear(int year);
 };
