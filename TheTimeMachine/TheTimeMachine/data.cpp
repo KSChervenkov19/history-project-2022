@@ -146,7 +146,7 @@ void data::createBaseNodes()
 	node14->year = 1304;
 	node14->outcome = true;
 	node14->description = "Bulgaria (with tsar Teodor Svetoslav as leader) against the Byzantine Empire";
-	node14->reason = "Recovering territories and revenge on Byzantine empire";
+	node14->reason = "Recover territories and take revenge on the Byzantine empire";
 	node14->area = "Near Burgas, Bulgaria";
 	node14->next = node15;
 
@@ -163,18 +163,18 @@ void data::createBaseNodes()
 	node16->name = "April Uprising";
 	node16->year = 1876;
 	node16->outcome = false;
-	node16->description = "Insurgent activists of BRCC vs Ottoman Empire (as leaders - Georgi Benkovski, Stoyan Zaimov, Panayot Volov, Ilarion Dragostinov, Stefan Stambolov)";
-	node16->reason = "A try to get the attention of Europe and to show that there is a nation that is fighting to survive";
-	node16->area = "Tarnovo (not much happens), Sliven, Vratsa (not much happens), Plovdiv (and the villages around them)";
+	node16->description = "Insurgent activists of BRCC (Georgi Benkovski, Stoyan Zaimov, Panayot Volov, Ilarion Dragostinov, Stefan Stambolov) against the Ottoman Empire";
+	node16->reason = "An attempt to get the attention of Europe and proclaim that there is still a nation fighting for it's survival in the Empire";
+	node16->area = "Tarnovo, Sliven, Vratsa, Plovdiv (and the nearby villages)";
 	node16->next = node17;
 
 	node17->id = 17;
-	node17->name = "The Battle of Shipka";
+	node17->name = "Battle of Shipka Pass";
 	node17->year = 1877;
 	node17->outcome = true;
-	node17->description = "Three-day (August 9-11) battle between Russian troops + Bulgarian volunteers (Gen. Stoletov as leader) vs Ottoman Empire";
-	node17->reason = "Holding positions until reinforcements arrive, so as not to lose a key position and progress in the war";
-	node17->area = "Shipka's Pass";
+	node17->description = "The battle went on for three days (August 9-11) between Russian troops helped by Bulgarian volunteers (Gen. Stoletov as leader) against the Ottoman Empire";
+	node17->reason = "Holding the line until the arrival of reinforcements, so that they don't lose their progress in the war";
+	node17->area = "Shipka Pass";
 	node17->next = node18;
 
 	node18->id = 18;
@@ -183,7 +183,7 @@ void data::createBaseNodes()
 	node18->outcome = true;
 	node18->description = "Serbia is dissatisfied with the unification of the Principality of Bulgaria with Eastern Rumelia and decides to declare war";
 	node18->reason = "To defend Sofia";
-	node18->area = "Nis, Vidin, Pirot, Dragoman, Tsaribrod, Slivnitsa";
+	node18->area = "Nish, Vidin, Pirot, Dragoman, Tsaribrod, Slivnitsa";
 	node18->next = node19;
 
 	node19->id = 19;
@@ -203,6 +203,4 @@ void data::createBaseNodes()
 	node20->reason = "Territorial expansion and return";
 	node20->area = "-";
 	node20->next = NULL;
-
-
 }
