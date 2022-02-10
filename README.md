@@ -1,6 +1,6 @@
 # TheTimeMachine
 
-<img src="">
+<img src="assets/logo_background_removed.png">
 
 ## Table of content
 
