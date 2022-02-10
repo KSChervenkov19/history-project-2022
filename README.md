@@ -6,11 +6,11 @@
 
 * [About](#About)
 
-* [Used for creation](#Used for creation)
+* [Used for creation](#Used-for-creation-🔧)
 
-* [Team](#Team)
+* [Team](#Team-👋)
 
-* [Preview](#Preview)
+* [Preview](#Preview-👩‍💻)
 
 
 ## About
