@@ -30,6 +30,7 @@ class data
 		};
 		std::vector <NODE*> events;
 		int closestYear;
+		int thatYear;
 		bool found;
 
 	public:

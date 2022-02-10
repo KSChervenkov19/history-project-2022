@@ -236,15 +236,18 @@ void data::findEventByYear(int year)
 		}
 		else
 		{
-			if (year <= closestYear)
+			int currentYear = std::abs(year - event->year);
+			if (currentYear <= closestYear)
 			{
-				closestYear = year;
+				closestYear = currentYear;
+				thatYear = event->year;
 			}
 		}
 	}
 	if (!found)
 	{
-		std::cout << "% Unknown year. Closest year: "<< closestYear << "\n";
+		std::cout << "% Unknown year. Closest year: "<< thatYear << "\n";
+		found = false;
 	}
 }
 
@@ -260,11 +263,13 @@ void data::findEventByName(std::string name)
 			std::cout << "  Reason: " << event->reason << "\n";
 			std::cout << "  Won: " << event->outcome << "\n";
 			std::cout << "  Area: " << event->area << "\n";
+			found = true;
 		}
 	}
 	if (!found)
 	{
 		std::cout << "% Unknown name. Press \"?\" to see all available names" << "\n";
+		found = false;
 	}
 }
 
