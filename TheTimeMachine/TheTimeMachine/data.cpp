@@ -178,29 +178,29 @@ void data::createBaseNodes()
 	node17->next = node18;
 
 	node18->id = 18;
-	node18->name = "The Battle of Slivnitsa";
+	node18->name = "Serbo-Bulgarian War";
 	node18->year = 1885;
 	node18->outcome = true;
-	node18->description = "Serbia is dissatisfied with the unification of the Principality of Bulgaria with Eastern Rumelia and decides to declare war";
-	node18->reason = "To defend Sofia";
-	node18->area = "Nish, Vidin, Pirot, Dragoman, Tsaribrod, Slivnitsa";
+	node18->description = "Bulgaria against Serbia";
+	node18->reason = "Serbia's dissatisfaction with the unification between the Kingdom of Bulgaria and Eastern Rumelia resulted to Serbia declaring a war";
+	node18->area = "Nish (present-day Serbia), Vidin, Pirot, Dragoman, Tsaribrod (Dimitrovgrad), Slivnitsa";
 	node18->next = node19;
 
 	node19->id = 19;
-	node19->name = "Balkan war";
+	node19->name = "Balkan War";
 	node19->year = 1912-1913;
 	node19->outcome = true;
-	node19->description = "Balkan Union (Bulgaria, Serbia, Greece, Montenegro) vs Ottoman Empire";
-	node19->reason = "Territorial expansion and return (does not receive them)";
-	node19->area = "-";
+	node19->description = "Balkan Union (Bulgaria, Serbia, Greece, Montenegro) against the Ottoman Empire";
+	node19->reason = "Expanding to new territories and restoration of old ones (unsuccessful)";
+	node19->area = "In many cities and terriroies in the Balkans";
 	node19->next = node20;
 
 	node20->id = 20;
-	node20->name = "First world war (Great war)";
+	node20->name = "World War I (Great War)";
 	node20->year = 1914-1918;
 	node20->outcome = false;
-	node20->description = "Central Forces(Germany, Italy, Austria-Hungary) vs the Entente";
-	node20->reason = "Territorial expansion and return";
-	node20->area = "-";
+	node20->description = "Central Powers (Germany, Italy, Austria-Hungary) against the Entente";
+	node20->reason = "Bulgaria joined the war on 14th October 1915 on the side of the Central Powers, because they were promised territorial compensation";
+	node20->area = "Most of Bulgaria's military campaigns during World War I took place around the border of the country";
 	node20->next = NULL;
 }
