@@ -21,7 +21,7 @@ class data
 			int id;
 			std::string name;
 			int year;
-			bool outcome;
+			std::string outcome;
 			std::string description;
 			std::string reason;
 			std::string area;
