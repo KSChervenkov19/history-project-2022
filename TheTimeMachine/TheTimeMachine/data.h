@@ -34,5 +34,8 @@ class data
 
 	public:
 		void createBaseNodes();
+		void displayNames();
 		void findEventByYear(int year);
+		void findEventByName(std::string name);
+		void findEventByOutcome(std::string outcome);
 };

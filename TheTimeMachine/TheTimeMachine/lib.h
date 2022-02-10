@@ -41,7 +41,7 @@ namespace ttm
 					typing = false;
 					std::cout << '\n';
 					str.pop_back();
-					getHelp();
+					getHelp(linkedListData);
 					counter = 0;
 					getLine(linkedListData);
 				}
@@ -126,7 +126,7 @@ namespace ttm
 						{
 							if (words[0] == currentPrivilegeWord)
 							{
-								executeHelp(currentPrivilegeWord);
+								executeHelp(currentPrivilegeWord, linkedListData);
 								globalBreak = true;
 								break;
 							}
@@ -195,7 +195,12 @@ namespace ttm
 				{
 					if (words.size() > 2)
 					{
-						name = words[2];
+						for (size_t i = 2; i < words.size(); i++)
+						{
+							name += words[i] + " ";
+						}
+						name.pop_back();
+						linkedListData->findEventByName(name);
 					}
 					else
 					{
@@ -249,7 +254,7 @@ namespace ttm
 				std::cout << stack.top();
 			}
 		}
-		void getHelp()
+		void getHelp(data* linkedListData)
 		{
 			stack.push(str);
 			std::string temp = "";
@@ -291,7 +296,7 @@ namespace ttm
 					i++;
 					if (words[0] == currentWord)
 					{
-						executeHelp(currentWord);
+						executeHelp(currentWord, linkedListData);
 						break;
 					}
 					else
@@ -302,7 +307,7 @@ namespace ttm
 							{
 								if (words[0] == currentPrivilegeCommand)
 								{
-									executeHelp(currentPrivilegeCommand);
+									executeHelp(currentPrivilegeCommand, linkedListData);
 									globalBreak = true;
 									break;
 								}
@@ -320,7 +325,7 @@ namespace ttm
 			theTimeMachine::str.clear();
 		}
 
-		void executeHelp(std::string currentWord)
+		void executeHelp(std::string currentWord, data* linkedListData)
 		{
 			if (currentWord == "enable")
 			{
@@ -332,7 +337,7 @@ namespace ttm
 			}
 			else if (currentWord == "search")
 			{
-				searchHelp();
+				searchHelp(linkedListData);
 			}
 			else if (currentWord == "add")
 			{
@@ -350,7 +355,7 @@ namespace ttm
 			std::cout << "  <cr>\n";
 		}
 
-		void searchHelp()
+		void searchHelp(data* linkedListData)
 		{
 			if (words.size() > 1)
 			{
@@ -369,7 +374,9 @@ namespace ttm
 				{
 					if (words.size() > 2)
 					{
-						std::cout << "  WORD  Name of the battle\n";
+						std::cout << "  WORD  Name of the battle\n\n";
+						std::cout << "  All available names: \n";
+						linkedListData->displayNames();
 					}
 					else
 					{

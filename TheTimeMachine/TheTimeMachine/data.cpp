@@ -188,7 +188,7 @@ void data::createBaseNodes()
 
 	node19->id = 19;
 	node19->name = "Balkan War";
-	node19->year = 1912 - 1913;
+	node19->year = 1912;
 	node19->outcome = "The battle was won by Bulgaria";
 	node19->description = "Balkan Union (Bulgaria, Serbia, Greece, Montenegro) against the Ottoman Empire";
 	node19->reason = "Expanding to new territories and restoration of old ones (unsuccessful)";
@@ -196,8 +196,8 @@ void data::createBaseNodes()
 	node19->next = node20;
 
 	node20->id = 20;
-	node20->name = "World War I (Great War)";
-	node20->year = 1914 - 1918;
+	node20->name = "World War 1";
+	node20->year = 1914;
 	node20->outcome = "The battle was won by the Entente";
 	node20->description = "Central Powers (Germany, Italy, Austria-Hungary) against the Entente";
 	node20->reason = "Bulgaria joined the war on 14th October 1915 on the side of the Central Powers, because they were promised territorial compensation";
@@ -208,6 +208,14 @@ void data::createBaseNodes()
 	{
 		events.push_back(node1);
 		node1 = node1->next;
+	}
+}
+
+void data::displayNames()
+{
+	for (NODE* event : events)
+	{
+		std::cout << "  Name: " << event->name << "\n";
 	}
 }
 
@@ -238,4 +246,29 @@ void data::findEventByYear(int year)
 	{
 		std::cout << "% Unknown year. Closest year: "<< closestYear << "\n";
 	}
+}
+
+void data::findEventByName(std::string name)
+{
+	for (NODE* event : events)
+	{
+		if (name == event->name)
+		{
+			std::cout << "  Name: " << event->name << "\n";
+			std::cout << "  Year: " << event->year << "\n";
+			std::cout << "  Description: " << event->description << "\n";
+			std::cout << "  Reason: " << event->reason << "\n";
+			std::cout << "  Won: " << event->outcome << "\n";
+			std::cout << "  Area: " << event->area << "\n";
+		}
+	}
+	if (!found)
+	{
+		std::cout << "% Unknown name. Press \"?\" to see all available names" << "\n";
+	}
+}
+
+void data::findEventByOutcome(std::string outcome)
+{
+	std::cout << "eysae";
 }
