@@ -18,27 +18,27 @@
 
 ## Used for creation🔧
 
-* Visual studio - for the code
+* *Visual studio* - for the code
 
-* Visual studio code - for sorting the code and creating README
+* *Visual studio code* - for sorting the code and creating README
 
-* Git hub - commiting the project ad sharing it
+* *Git hub* - commiting the project ad sharing it
 
-* Photoshop - for creating logo and images 
+* *Photoshop* - for creating logo and images 
 
-* Word and PowerPoint - for creating documentation and presentation
+* *Word and PowerPoint* - for creating documentation and presentation
 
-* Discord - comunication
+* *Discord* - comunication
 
 ## Team👋
 
-* Kalin Chervenkov - backend developer - <KSChervenkov19@codingburgas.bg>
+* **Kalin Chervenkov** - backend developer - <KSChervenkov19@codingburgas.bg>
 
-* Tereza Opanska - frontend developer - <TNOpanska@codingburgas.bg>
+* **Tereza Opanska** - frontend developer - <TNOpanska@codingburgas.bg>
 
-* Dobrin Peychev - scrum trainer - <DIPeychev19@codingburgas.bg>
+* **Dobrin Peychev** - scrum trainer - <DIPeychev19@codingburgas.bg>
 
-* Nikolai Brankov - QA engineer - <NPBrankov19@codingburgas.bg>
+* **Nikolai Brankov** - QA engineer - <NPBrankov19@codingburgas.bg>
 
 
 ## Preview👩‍💻
