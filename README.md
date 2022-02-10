@@ -6,17 +6,17 @@
 
 * [About](#About)
 
-* [Used for creation](#Used-for-creation🔧)
+* [Used for creation](#Used-for-creation)
 
-* [Team](#Team👋)
+* [Team](#Team)
 
-* [Preview](#Preview👩‍💻)
+* [Preview](#Preview)
 
 
 ## About
 
 
-## Used for creation 🔧
+## Used for creation🔧
 
 * Visual studio - for the code
 
@@ -30,7 +30,7 @@
 
 * Discord - comunication
 
-## Team 👋
+## Team👋
 
 * Kalin Chervenkov - backend developer - <KSChervenkov19@codingburgas.bg>
 
@@ -41,7 +41,7 @@
 * Nikolai Brankov - QA engineer - <NPBrankov19@codingburgas.bg>
 
 
-## Preview 👩‍💻
+## Preview👩‍💻
 
 ![preview image](assets/logo_background_removed.png)
 
