@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo_background_removed.png" />
+  <img src="assets/logo_background_removed.png" />
 </p>
 
 ## Table of content 📃
