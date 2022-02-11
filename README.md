@@ -1,5 +1,5 @@
-<p aling="center">
-![team logo](assets/logo_background_removed.png)
+<p align="center">
+  <img src="logo_background_removed.png" />
 </p>
 
 ## Table of content 📃
@@ -44,6 +44,6 @@ Our project contains **Cisco-style command line interface about Bulgaria's most 
 
 ## Preview👩‍💻
 
-<p aling="center">
-![preview image](assets/code.png)
+<p align="center">
+  <img src="assets/code.png" />
 </p>
