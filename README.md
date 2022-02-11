@@ -1,6 +1,6 @@
-# The Time Machine ⏲
-
+<p aling="center">
 ![team logo](assets/logo_background_removed.png)
+</p>
 
 ## Table of content 📃
 
@@ -13,8 +13,9 @@
 * [Preview](#Preview)
 
 
-## About
+## About❓
 
+Our project contains **Cisco-style command line interface about Bulgaria's most significant battles.**
 
 ## Used for creation🔧
 
@@ -43,6 +44,6 @@
 
 ## Preview👩‍💻
 
-![preview image](assets/logo_background_removed.png)
-
-
+<p aling="center">
+![preview image](assets/code.png)
+</p>
