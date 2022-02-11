@@ -20,12 +20,11 @@ namespace ttm
 		std::string year;
 		std::string name;
 		std::string outcome;
-		int counter = 0;
+		size_t counter = 0;
 		int intYear;
 		char ch;
 		std::vector<std::string> words;
 		std::stack<std::string> stack;
-		std::map<std::string, void(*)(std::string)> commandsMap;
 
 	public:
 		void getLine(data* linkedListData)
@@ -82,13 +81,13 @@ namespace ttm
 					str.pop_back();
 					getLastCommand(linkedListData);
 				}
-				if (ch == 71 || ch == 73 || ch == 75 || ch == 76 || ch == 77 || ch == 79 || ch == 80 || ch == 81 || ch == 82 || ch == 83)
-				{
-					counter -= 2;
-					std::cout << '\b' << ' ' << '\b';
-					str.pop_back();
-					str.pop_back();
-				}
+				//if (ch == 71 || ch == 73 || ch == 75 || ch == 76 || ch == 77 || ch == 79 || ch == 80 || ch == 81 || ch == 82 || ch == 83)
+				//{
+				//	counter -= 2;
+				//	std::cout << '\b' << ' ' << '\b';
+				//	str.pop_back();
+				//	str.pop_back();
+				//}
 			}
 		}
 		void getCommand(data* linkedListData)
@@ -126,7 +125,7 @@ namespace ttm
 						{
 							if (words[0] == currentPrivilegeWord)
 							{
-								executeHelp(currentPrivilegeWord, linkedListData);
+								executeCommand(currentPrivilegeWord, linkedListData);
 								globalBreak = true;
 								break;
 							}
@@ -201,6 +200,7 @@ namespace ttm
 						}
 						name.pop_back();
 						linkedListData->findEventByName(name);
+						name.clear();
 					}
 					else
 					{
@@ -212,6 +212,7 @@ namespace ttm
 					if (words.size() > 2)
 					{
 						outcome = words[2];
+						linkedListData->findEventByOutcome(outcome);
 					}
 					else
 					{
@@ -239,7 +240,6 @@ namespace ttm
 			if (stack.empty())
 			{
 				std::cout << "\n% There are no signs of last commands used.\n";
-				str.clear();
 				getLine(linkedListData);
 			}
 			else
@@ -250,6 +250,7 @@ namespace ttm
 					counter--;
 				}
 				counter += stack.top().size();
+				str.clear();
 				str = stack.top();
 				std::cout << stack.top();
 			}
@@ -409,7 +410,7 @@ namespace ttm
 		{
 				if (words.size() > 1)
 				{
-					std::cout << "  WORD \"name\"  NUMBER \"year\"  Yes/No \"outcome\"  WORD \"description\"  WORD \"reason\"\n  NOTE: Space each parameter with quotation marks\n";
+					std::cout << "  WORD \"name\"  NUMBER \"year\"  Win/Loss \"outcome\"  WORD \"description\"  WORD \"reason\"\n  NOTE: Space each parameter with quotation marks\n";
 				}
 				else
 				{
