@@ -163,8 +163,8 @@ void data::createBaseNodes()
 	node16->name = "April Uprising";
 	node16->year = 1876;
 	node16->outcome = "Loss";
-	node16->description = "Insurgent activists of BRCC (Georgi Benkovski, Stoyan Zaimov, Panayot Volov, Ilarion Dragostinov, Stefan Stambolov) against the Ottoman Empire";
-	node16->reason = "An attempt to get the attention of Europe and proclaim that there is still a nation fighting for it's survival in the Empire";
+	node16->description = "Insurgent activists of BRCC against the Ottoman Empire";
+	node16->reason = "An attempt of the Bulgarians to get the attention of Europe and it's help";
 	node16->area = "Tarnovo, Sliven, Vratsa, Plovdiv (and the nearby villages)";
 	node16->next = node17;
 
@@ -172,7 +172,7 @@ void data::createBaseNodes()
 	node17->name = "Battle of Shipka Pass";
 	node17->year = 1877;
 	node17->outcome = "Win";
-	node17->description = "The battle went on for three days (August 9-11) between Russian troops helped by Bulgarian volunteers (Gen. Stoletov as leader) against the Ottoman Empire";
+	node17->description = "Russian troops helped by Bulgarian volunteers (Gen. Stoletov as leader) against the Ottoman Empire";
 	node17->reason = "Holding the line until the arrival of reinforcements, so that they don't lose their progress in the war";
 	node17->area = "Shipka Pass";
 	node17->next = node18;
@@ -182,7 +182,7 @@ void data::createBaseNodes()
 	node18->year = 1885;
 	node18->outcome = "Win";
 	node18->description = "Bulgaria against Serbia";
-	node18->reason = "Serbia's dissatisfaction with the unification between the Kingdom of Bulgaria and Eastern Rumelia resulted to Serbia declaring a war";
+	node18->reason = "Serbia's dissatisfaction with the unification between the Kingdom of Bulgaria and Eastern Rumelia";
 	node18->area = "Nish (present-day Serbia), Vidin, Pirot, Dragoman, Tsaribrod (Dimitrovgrad), Slivnitsa";
 	node18->next = node19;
 
@@ -200,7 +200,7 @@ void data::createBaseNodes()
 	node20->year = 1914;
 	node20->outcome = "Loss";
 	node20->description = "Central Powers (Germany, Italy, Austria-Hungary) against the Entente";
-	node20->reason = "Bulgaria joined the war on 14th October 1915 on the side of the Central Powers, because they were promised territorial compensation";
+	node20->reason = "Bulgaria joined the war after being promised territorial compensation from the Central Powers";
 	node20->area = "Most of Bulgaria's military campaigns during World War I took place around the border of the country";
 	node20->next = NULL;
 
