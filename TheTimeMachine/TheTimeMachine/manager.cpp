@@ -2,7 +2,7 @@
 
 void manager::cli(ttm::theTimeMachine* mainProcess, data* linkedListData)
 {
-	linkedListData->createBaseNodes();
+	linkedListData->createNodes();
 	std::cout << mainProcess->info;
 	ch = _getch();
 	activate = (ch == '\r') ? true : false;

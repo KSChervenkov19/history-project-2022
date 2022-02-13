@@ -32,11 +32,19 @@ class data
 		int closestYear;
 		int thatYear;
 		bool found;
+		std::fstream manageData;
+		NODE* head;
+		NODE* tail;
+		NODE* old;
 
 	public:
-		void createBaseNodes();
+		void createNodes();
+		void deleteNodes();
 		void displayNames();
 		void findEventByYear(int year);
 		void findEventByName(std::string name);
 		void findEventByOutcome(std::string outcome);
+		void addData(std::vector <std::string> eventParams);
+		void getData();
+		void addNode(std::string name, int year, std::string outcome, std::string description, std::string reason);
 };

@@ -1,6 +1,6 @@
 #include "data.h"
 
-void data::createBaseNodes()
+void data::createNodes()
 {
 	NODE* node1 = new NODE;
 	NODE* node2 = new NODE;
@@ -204,10 +204,26 @@ void data::createBaseNodes()
 	node20->area = "Most of Bulgaria's military campaigns during World War I took place around the border of the country";
 	node20->next = NULL;
 
+	head = node1;
+	tail = node20;
+
+	getData();
+
 	while (node1 != NULL)
 	{
 		events.push_back(node1);
 		node1 = node1->next;
+	}
+
+}
+
+void data::deleteNodes()
+{
+	while (head != NULL)
+	{
+		old = head;
+		head = head->next;
+		delete old;
 	}
 }
 
@@ -255,7 +271,7 @@ void data::findEventByName(std::string name)
 {
 	for (NODE* event : events)
 	{
-		std::cout << "   " << name << "." << event->name << "   ";
+
 		if (name == event->name)
 		{
 			std::cout << "  Name: " << event->name << "\n";
@@ -295,4 +311,50 @@ void data::findEventByOutcome(std::string outcome)
 		std::cout << "% Unknown outcome type. Outcome types are Win/Loss" << "\n";
 	}
 	found = false;
+}
+
+void data::addData(std::vector <std::string> eventParams)
+{
+	manageData.open("../../data/listData.data", std::ios::app);
+	for (std::string param : eventParams)
+	{
+		manageData << param << ',';
+	}
+	manageData << '\n';
+	manageData.close();
+	getData();
+	deleteNodes();
+	createNodes();
+}
+
+void data::getData()
+{
+	manageData.open("../../data/listData.data", std::fstream::in);
+	std::string name, year, outcome, description, reason, next;
+
+	while (std::getline(manageData, name, ','))
+	{
+		std::getline(manageData, year, ',');
+		std::getline(manageData, outcome, ',');
+		std::getline(manageData, description, ',');
+		std::getline(manageData, reason, ',');
+		std::getline(manageData, next, '\n');
+
+		addNode(name, stoi(year), outcome, description, reason);
+	}
+	manageData.close();
+}
+
+void data::addNode(std::string name, int year, std::string outcome, std::string description, std::string reason)
+{
+	NODE* addEvent = new NODE;
+	addEvent->name = name;
+	addEvent->year = year;
+	addEvent->outcome = outcome;
+	addEvent->description = description;
+	addEvent->reason = reason;
+	addEvent->next = NULL;
+
+	tail->next = addEvent;
+	tail = tail->next;
 }

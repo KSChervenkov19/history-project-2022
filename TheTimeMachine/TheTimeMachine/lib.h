@@ -14,6 +14,7 @@ namespace ttm
 	public:
 		bool privilege = false;
 		bool typing = false;
+		bool startWriting = false;
 		const std::string info = "Press ENTER to get started!\n\n";
 		std::string prefix = "cli>";
 		std::string str = "";
@@ -25,6 +26,7 @@ namespace ttm
 		char ch;
 		std::vector<std::string> words;
 		std::stack<std::string> stack;
+		std::vector<std::string> eventParameters;
 
 	public:
 		void getLine(data* linkedListData)
@@ -93,6 +95,7 @@ namespace ttm
 		void getCommand(data* linkedListData)
 		{
 			std::string temp = "";
+			std::string addCommandTemp = "";
 			for (size_t i = 0; i < str.length(); ++i)
 			{
 				if (str[i] == ' ')
@@ -103,6 +106,27 @@ namespace ttm
 				else
 				{
 					temp.push_back(str[i]);
+				}
+			}
+			for (size_t i = 0; i < str.length(); ++i)
+			{
+				if (str[i] == '\"')
+				{
+					startWriting = !startWriting;
+					i++;
+				}
+				if (startWriting)
+				{
+					addCommandTemp.push_back(str[i]);
+				}
+				else
+				{
+					eventParameters.push_back(addCommandTemp);
+					if (eventParameters.back() == "")
+					{
+						eventParameters.pop_back();
+					}
+					addCommandTemp = "";
 				}
 			}
 			words.push_back(temp);
@@ -138,6 +162,7 @@ namespace ttm
 				}
 			}
 			words.clear();
+			eventParameters.clear();
 			theTimeMachine::str.clear();
 		}
 
@@ -157,7 +182,7 @@ namespace ttm
 			}
 			else if (currentWord == "add")
 			{
-				add();
+				add(linkedListData);
 			}
 		}
 
@@ -230,9 +255,17 @@ namespace ttm
 			}
 		}
 
-		void add()
+		void add(data* linkedListData)
 		{
-			std::cout << "yeye";
+
+			if (eventParameters.size() == 5)
+			{
+				linkedListData->addData(eventParameters);
+			}
+			else
+			{
+				std::cout << "% Incorrect parameters.\n";
+			}
 		}
 
 		void getLastCommand(data* linkedListData)
