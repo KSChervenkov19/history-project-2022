@@ -29,6 +29,8 @@ Our project contains **Cisco-style command line interface about Bulgaria's most 
 
 * *Word and PowerPoint* - for creating documentation and presentation
 
+* *ArcGis* - for creating the maps
+
 * *Discord* - comunication
 
 ## Team👋
