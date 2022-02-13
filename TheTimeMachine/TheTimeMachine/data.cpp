@@ -30,7 +30,7 @@ void data::createNodes()
 	node1->outcome = "Win";
 	node1->description = "Bulgaria (with khan Asparuh as leader) against the Byzantine Empire";
 	node1->reason = "Establishing  territory ownership";
-	node1->area = "Lesser Scythia";
+	node1->area = "Lesser Scythia\n  Map: https://arcg.is/1H1eCD0";
 	node1->next = node2;
 
 	node2->id = 2;
@@ -39,7 +39,7 @@ void data::createNodes()
 	node2->outcome = "Win";
 	node2->description = "Bulgaria (with khan Tervel as leader) against the Byzantine Empire";
 	node2->reason = "Bulgaria wishes to aid Justinian II to retake his throne";
-	node2->area = "Lands around Anchialus";
+	node2->area = "Lands around Anchialus\n  Map: https://arcg.is/1K5j1f";
 	node2->next = node3;
 
 	node3->id = 3;
@@ -48,7 +48,7 @@ void data::createNodes()
 	node3->outcome = "Win";
 	node3->description = "Bulgaria (with khan Krum as leader) against the Byzantine Empire";
 	node3->reason = "Byzantine Empire declares war to expand it's boundaries";
-	node3->area = "Varbitsa Pass";
+	node3->area = "Varbitsa Pass\n  Map: https://arcg.is/0qyC5L";
 	node3->next = node4;
 
 	node4->id = 4;
@@ -57,7 +57,7 @@ void data::createNodes()
 	node4->outcome = "Win";
 	node4->description = "Bulgaria (with khan Krum as leader) against the Byzantine Empire";
 	node4->reason = "Byzantine Empire declares war to expand it's boundaries";
-	node4->area = "Adrianople, present Edirne, Turkey";
+	node4->area = "Adrianople, present Edirne, Turkey\n  Map: https://arcg.is/HynmO";
 	node4->next = node5;
 
 	node5->id = 5;
@@ -66,7 +66,7 @@ void data::createNodes()
 	node5->outcome = "Win";
 	node5->description = "Bulgaria (with khan Krum as leader) against the Byzantine Empire";
 	node5->reason = "Byzantine Empire declares war to expand it's boundaries";
-	node5->area = "Versinikia, present Elhovo";
+	node5->area = "Versinikia, present Elhovo\n  Map: https://arcg.is/eGifT";
 	node5->next = node6;
 
 	node6->id = 6;
@@ -75,7 +75,7 @@ void data::createNodes()
 	node6->outcome = "Win";
 	node6->description = "Bulgaria (with tsar Simeon I as leader) against the Byzantine Empire";
 	node6->reason = "Tsar Simeon wants to expand his influence over the Byzantine Empire";
-	node6->area = "Pegae, Byzantine Empire";
+	node6->area = "Pegae, Byzantine Empire\n  Map: https://arcg.is/04Gq0S";
 	node6->next = node7;
 
 	node7->id = 7;
@@ -84,7 +84,7 @@ void data::createNodes()
 	node7->outcome = "Win";
 	node7->description = "Bulgaria (with tsar Samuel and Aron as leaders) against the Byzantine Empire";
 	node7->reason = "Tsar Samuel sees an opportunity to expand his territories because of the weak state of the Byzantine empire";
-	node7->area = "The mountain pass Trajan's Gate (Trayanovi vrata), Bulgaria";
+	node7->area = "The mountain pass Trajan's Gate (Trayanovi vrata), Bulgaria\n  Map: https://arcg.is/15CWr1";
 	node7->next = node8;
 
 	node8->id = 8;
@@ -93,7 +93,7 @@ void data::createNodes()
 	node8->outcome = "Win";
 	node8->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
 	node8->reason = "Samuel sees the outcome of his victory at Gates of Trajan and continues on south";
-	node8->area = "Thessalonica, Byzantine Empire";
+	node8->area = "Thessalonica, Byzantine Empire\n  Map: https://arcg.is/GSzSy3";
 	node8->next = node9;
 
 	node9->id = 9;
@@ -102,7 +102,7 @@ void data::createNodes()
 	node9->outcome = "Loss";
 	node9->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
 	node9->reason = "The successful progress of Basil II's campaign against Bulgaria";
-	node9->area = "Skopje, present North Macedonia";
+	node9->area = "Skopje, present North Macedonia\n  Map: https://arcg.is/0DG9uC";
 	node9->next = node10;
 
 	node10->id = 10;
@@ -111,7 +111,7 @@ void data::createNodes()
 	node10->outcome = "Win";
 	node10->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
 	node10->reason = "Recovering territories and blocking the Byzantine empire";
-	node10->area = "Between Belasica and Plavush, present-day North Macedonia";
+	node10->area = "Between Belasica and Plavush, present-day North Macedonia\n  Map: https://arcg.is/SzGvz";
 	node10->next = node11;
 
 	node11->id = 11;
@@ -120,7 +120,7 @@ void data::createNodes()
 	node11->outcome = "Loss";
 	node11->description = "Bulgaria (with tsar Samuel as leader) against the Byzantine Empire";
 	node11->reason = "To stop the Byzantine Empire from attacking Bulgaria";
-	node11->area = "Between Belasica and Ograzden, near present-day village Klyuch in Bulgaria";
+	node11->area = "Between Belasica and Ograzden, near present-day village Klyuch in Bulgaria\n  Map: https://arcg.is/0jOaDr";
 	node11->next = node12;
 
 	node12->id = 12;
@@ -129,7 +129,7 @@ void data::createNodes()
 	node12->outcome = "Win";
 	node12->description = "Bulgaria (with tsar Ivan Asen I and tsar Peter I Asen as leaders) against the Byzantine Empire";
 	node12->reason = "Tsar Ivan Asen I used the third crusade as an advantage to recover lost territories to Bulgaria";
-	node12->area = "Tryavna, Bulgaria";
+	node12->area = "Tryavna, Bulgaria\n  Map: https://arcg.is/0SamuK";
 	node12->next = node13;
 
 	node13->id = 13;
@@ -138,7 +138,7 @@ void data::createNodes()
 	node13->outcome = "Win";
 	node13->description = "Bulgaria (with tsar Ivan Asen II as leader) against the Epirus despotism";
 	node13->reason = "To cease Teodor Komnin and his plan to prevent tsar Ivan Asen II of increasing Bulgaria's influence";
-	node13->area = "Between the river Klokotnitsa and the village Klokotnitsa";
+	node13->area = "Between the river Klokotnitsa and the village Klokotnitsa\n  Map: https://arcg.is/eGCPv";
 	node13->next = node14;
 
 	node14->id = 14;
@@ -147,7 +147,7 @@ void data::createNodes()
 	node14->outcome = "Win";
 	node14->description = "Bulgaria (with tsar Teodor Svetoslav as leader) against the Byzantine Empire";
 	node14->reason = "Recover territories and take revenge on the Byzantine empire";
-	node14->area = "Near Burgas, Bulgaria";
+	node14->area = "Near Burgas, Bulgaria\n  Map: https://arcg.is/eueu90";
 	node14->next = node15;
 
 	node15->id = 15;
@@ -156,7 +156,7 @@ void data::createNodes()
 	node15->outcome = "Win";
 	node15->description = "Bulgaria (with tsar Ivan Aleksandar as leader) against the Byzantine Empire";
 	node15->reason = "An attempt to stop the invasion of the Byzantine Empire, which grows into an attack against them";
-	node15->area = "Near Rusokastro";
+	node15->area = "Near Rusokastro\n  Map: https://arcg.is/1Guy1L0";
 	node15->next = node16;
 
 	node16->id = 16;
@@ -165,7 +165,7 @@ void data::createNodes()
 	node16->outcome = "Loss";
 	node16->description = "Insurgent activists of BRCC against the Ottoman Empire";
 	node16->reason = "An attempt of the Bulgarians to get the attention of Europe and it's help";
-	node16->area = "Tarnovo, Sliven, Vratsa, Plovdiv (and the nearby villages)";
+	node16->area = "Tarnovo, Sliven, Vratsa, Plovdiv (and the nearby villages)\n  Map: https://arcg.is/Kzer0";
 	node16->next = node17;
 
 	node17->id = 17;
@@ -174,7 +174,7 @@ void data::createNodes()
 	node17->outcome = "Win";
 	node17->description = "Russian troops helped by Bulgarian volunteers (Gen. Stoletov as leader) against the Ottoman Empire";
 	node17->reason = "Holding the line until the arrival of reinforcements, so that they don't lose their progress in the war";
-	node17->area = "Shipka Pass";
+	node17->area = "Shipka Pass\n  Map: https://arcg.is/1bLu4j";
 	node17->next = node18;
 
 	node18->id = 18;
@@ -183,7 +183,7 @@ void data::createNodes()
 	node18->outcome = "Win";
 	node18->description = "Bulgaria against Serbia";
 	node18->reason = "Serbia's dissatisfaction with the unification between the Kingdom of Bulgaria and Eastern Rumelia";
-	node18->area = "Nish (present-day Serbia), Vidin, Pirot, Dragoman, Tsaribrod (Dimitrovgrad), Slivnitsa";
+	node18->area = "Nish (present-day Serbia), Vidin, Pirot, Dragoman, Tsaribrod (Dimitrovgrad), Slivnitsa\n  Map: https://arcg.is/1zavSW0";
 	node18->next = node19;
 
 	node19->id = 19;
@@ -192,7 +192,7 @@ void data::createNodes()
 	node19->outcome = "Win";
 	node19->description = "Balkan Union (Bulgaria, Serbia, Greece, Montenegro) against the Ottoman Empire";
 	node19->reason = "Expanding to new territories and restoration of old ones (unsuccessful)";
-	node19->area = "In many cities and terriroies in the Balkans";
+	node19->area = "In many cities and terriroies in the Balkans\n  Map: https://arcg.is/1yKqm40";
 	node19->next = node20;
 
 	node20->id = 20;
@@ -201,7 +201,7 @@ void data::createNodes()
 	node20->outcome = "Loss";
 	node20->description = "Central Powers (Germany, Italy, Austria-Hungary) against the Entente";
 	node20->reason = "Bulgaria joined the war after being promised territorial compensation from the Central Powers";
-	node20->area = "Most of Bulgaria's military campaigns during World War I took place around the border of the country";
+	node20->area = "Most of Bulgaria's military campaigns during World War I took place around the border of the country\n  Map: https://arcg.is/10vrbO";
 	node20->next = NULL;
 
 	head = node1;
