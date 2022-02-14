@@ -15,6 +15,8 @@ namespace ttm
 		bool privilege = false;
 		bool typing = false;
 		bool startWriting = false;
+		int intYear;
+		char ch;
 		const std::string info = "Bulgaria's Battles Time Machine, TTM Software, Version 12.2 (25), RELEASE SOFTWARE (fc1)\nCompiled by ttm_team\n\nPress ENTER to get started!\n\n";
 		std::string prefix = "cli>";
 		std::string str = "";
@@ -22,8 +24,6 @@ namespace ttm
 		std::string name;
 		std::string outcome;
 		size_t counter = 0;
-		int intYear;
-		char ch;
 		std::vector<std::string> words;
 		std::stack<std::string> stack;
 		std::vector<std::string> eventParameters;

@@ -47,4 +47,5 @@ class data
 		void addData(std::vector <std::string> eventParams);
 		void getData();
 		void addNode(std::string name, int year, std::string outcome, std::string description, std::string reason);
+		int convertToGray(int num);
 };
