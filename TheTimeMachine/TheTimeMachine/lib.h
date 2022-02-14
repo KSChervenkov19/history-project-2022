@@ -15,7 +15,7 @@ namespace ttm
 		bool privilege = false;
 		bool typing = false;
 		bool startWriting = false;
-		const std::string info = "Press ENTER to get started!\n\n";
+		const std::string info = "Bulgaria's Battles Time Machine, TTM Software, Version 12.2 (25), RELEASE SOFTWARE (fc1)\nCompiled by ttm_team\n\nPress ENTER to get started!\n\n";
 		std::string prefix = "cli>";
 		std::string str = "";
 		std::string year;
@@ -83,13 +83,6 @@ namespace ttm
 					str.pop_back();
 					getLastCommand(linkedListData);
 				}
-				//if (ch == 71 || ch == 73 || ch == 75 || ch == 76 || ch == 77 || ch == 79 || ch == 80 || ch == 81 || ch == 82 || ch == 83)
-				//{
-				//	counter -= 2;
-				//	std::cout << '\b' << ' ' << '\b';
-				//	str.pop_back();
-				//	str.pop_back();
-				//}
 			}
 		}
 		void getCommand(data* linkedListData)
@@ -288,6 +281,7 @@ namespace ttm
 				std::cout << stack.top();
 			}
 		}
+
 		void getHelp(data* linkedListData)
 		{
 			stack.push(str);
