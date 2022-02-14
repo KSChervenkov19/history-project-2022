@@ -8,19 +8,21 @@ namespace ttm
 	class theTimeMachine
 	{
 	public:
-		const std::vector<std::string> privilegeVec = { "add" };
-		const std::vector<std::string> commandsVec = { "enable", "disable", "search" };
+		const std::vector<std::string> privilegeVec = { "add", "delete" };
+		const std::vector<std::string> commandsVec = { "enable", "disable", "search"};
 
 	public:
 		bool privilege = false;
 		bool typing = false;
 		bool startWriting = false;
 		int intYear;
+		int deleteIntYear;
 		char ch;
 		const std::string info = "Bulgaria's Battles Time Machine, TTM Software, Version 12.2 (25), RELEASE SOFTWARE (fc1)\nCompiled by ttm_team\n\nPress ENTER to get started!\n\n";
 		std::string prefix = "cli>";
 		std::string str = "";
 		std::string year;
+		std::string deleteYear;
 		std::string name;
 		std::string outcome;
 		size_t counter = 0;
@@ -177,6 +179,10 @@ namespace ttm
 			{
 				add(linkedListData);
 			}
+			else if (currentWord == "delete")
+			{
+				deleteEvent(linkedListData);
+			}
 		}
 
 		void enable()
@@ -237,6 +243,10 @@ namespace ttm
 						std::cout << "% Incomplete command.\n";
 					}
 				}
+				else if (words[1] == "all")
+				{
+					linkedListData->displayAll();
+				}
 				else
 				{
 					std::cout << "% Invalid input detected at the second index.\n";
@@ -259,6 +269,11 @@ namespace ttm
 			{
 				std::cout << "% Incorrect parameters.\n";
 			}
+		}
+
+		void deleteEvent(data* linkedListData)
+		{
+			linkedListData->deleteCustomList();
 		}
 
 		void getLastCommand(data* linkedListData)
@@ -341,7 +356,7 @@ namespace ttm
 								}
 							}
 						}
-						if (i == privilegeVec.size() - 1)
+						if (i == commandsVec.size())
 						{
 							std::cout << ((str == "") ? "" : "% Unknown command.\n");
 						}
@@ -371,6 +386,10 @@ namespace ttm
 			{
 				addHelp();
 			}
+			else if (currentWord == "delete")
+			{
+				deleteHelp();
+			}
 		}
 
 		void enableHelp()
@@ -395,7 +414,7 @@ namespace ttm
 					}
 					else
 					{
-						std::cout << "  year\n  name\n  outcome\n";
+						std::cout << "  year\n  name\n  outcome\n  all\n";
 					}
 				}
 				else if (words[1] == "name")
@@ -408,7 +427,7 @@ namespace ttm
 					}
 					else
 					{
-						std::cout << "  year\n  name\n  outcome\n";
+						std::cout << "  year\n  name\n  outcome\n  all\n";
 					}
 				}
 				else if (words[1] == "outcome")
@@ -419,12 +438,16 @@ namespace ttm
 					}
 					else
 					{
-						std::cout << "  year\n  name\n  outcome\n";
+						std::cout << "  year\n  name\n  outcome\n  all\n";
 					}
+				}
+				else if (words[1] == "all")
+				{
+					std::cout << "  <cr>\n";
 				}
 				else
 				{
-					std::cout << "  year\n  name\n  outcome\n";
+					std::cout << "  year\n  name\n  outcome\n  all\n";
 				}
 			}
 			else
@@ -443,6 +466,18 @@ namespace ttm
 				{
 					std::cout << "  add\n";
 				}
+		}
+
+		void deleteHelp()
+		{
+			if (words.size() > 1)
+			{
+				std::cout << "  <cr>\n";
+			}
+			else
+			{
+				std::cout << "  delete\n";
+			}
 		}
 	};
 }

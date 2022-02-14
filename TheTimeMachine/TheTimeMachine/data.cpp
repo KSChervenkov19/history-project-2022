@@ -235,6 +235,20 @@ void data::displayNames()
 	}
 }
 
+void data::displayAll()
+{
+	for (NODE* event : events)
+	{
+		std::cout << "  Name: " << event->name << "\n";
+		std::cout << "  Year: " << event->year << "\n";
+		std::cout << "  Description: " << event->description << "\n";
+		std::cout << "  Reason: " << event->reason << "\n";
+		std::cout << "  Outcome: " << event->outcome << "\n";
+		std::cout << "  Area: " << event->area << "\n";
+		std::cout << "\n";
+	}
+}
+
 void data::findEventByYear(int year)
 {
 	closestYear = INT_MAX;
@@ -357,6 +371,13 @@ void data::addNode(std::string name, int year, std::string outcome, std::string 
 
 	tail->next = addEvent;
 	tail = tail->next;
+}
+
+void data::deleteCustomList()
+{
+	std::remove("../../data/listData.data");
+	deleteNodes();
+	createNodes();
 }
 
 int data::convertToGray(int num)
