@@ -558,41 +558,27 @@ namespace ttm
 			std::cout << "  <cr>\n";
 		}
 
+		//auto-complete unfinished command via regex
 		void autoComplete(data* linkedListData)
 		{
 			str.pop_back();
 			std::cout << '\n';
 			counter = 0;
 			std::regex strExpr("(" + str + ")(.*)");
-			if (!privilege)
+			for (std::string currentCommand : commandsVec)
 			{
-				for (std::string currentCommand : commandsVec)
+				std::string command(currentCommand);
+				if (std::regex_match(command, strExpr))
 				{
-					std::string command(currentCommand);
-					if (std::regex_match(command, strExpr))
-					{
-						regexStr = currentCommand;
-						str = regexStr;
-						stack.push(regexStr);
-						counter = currentCommand.size();
-						getLine(linkedListData);
-					}
+					regexStr = currentCommand;
+					str = regexStr;
+					stack.push(regexStr);
+					counter = currentCommand.size();
+					getLine(linkedListData);
 				}
 			}
-			else
+			if (privilege)
 			{
-				for (std::string currentCommand : commandsVec)
-				{
-					std::string command(currentCommand);
-					if (std::regex_match(command, strExpr))
-					{
-						regexStr = currentCommand;
-						str = regexStr;
-						stack.push(regexStr);
-						counter = currentCommand.size();
-						getLine(linkedListData);
-					}
-				}
 				for (std::string currentCommand : privilegeVec)
 				{
 					std::string command(currentCommand);
