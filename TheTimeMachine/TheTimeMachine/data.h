@@ -1,6 +1,10 @@
 #pragma once
 
 #pragma region std_includes
+// O------------------------------------------------------------------------------O
+// | STANDARD INCLUDES                                                            |
+// O------------------------------------------------------------------------------O
+
 #include <iostream>
 #include <vector>
 #include <string>

@@ -1,5 +1,24 @@
 #include "data.h"
 
+#pragma region help
+/*
+	lib.h
+
+	What is this?
+	~~~~~~~~~~~~~
+	ttm::theTimeMachine is a single file, cisco/switch style based command line interface
+	It is developed by ttm_team as an assistive tool for their project.
+
+	This file provides the core utility set of the ttm::theTimeMachine, including
+	cisco/switch style typing, help menus, use of other external functions, privilege mode and a bunch of utility
+	types.
+
+	Author
+	~~~~~~
+	ttm_team
+*/
+#pragma endregion
+
 #pragma region ttm_declaration
 #ifndef THETIMEMACHINE
 #define THETIMEMACHINE
@@ -8,27 +27,30 @@ namespace ttm
 	class theTimeMachine
 	{
 	public:
+		//command vectors
 		const std::vector<std::string> privilegeVec = { "add", "delete" };
 		const std::vector<std::string> commandsVec = { "enable", "disable", "search", "clear"};
 
 	public:
-		bool privilege = false;
-		bool typing = false;
-		bool startWriting = false;
+		//public variables
 		int intYear;
-		int deleteIntYear;
-		char ch;
 		const std::string info = "Bulgaria's Battles Time Machine, TTM Software, Version 12.2 (25), RELEASE SOFTWARE (fc1)\nCompiled by ttm_team\n\nPress ENTER to get started!\n\n";
 		std::string prefix = "cli>";
 		std::string str = "";
 		std::string year;
-		std::string deleteYear;
 		std::string name;
 		std::string outcome;
+		std::vector<std::string> eventParameters;
+
+	private:
+		//private variables
+		bool privilege = false;
+		bool typing = false;
+		bool startWriting = false;
+		char ch;
 		size_t counter = 0;
 		std::vector<std::string> words;
 		std::stack<std::string> stack;
-		std::vector<std::string> eventParameters;
 
 	public:
 		void getLine(data* linkedListData)
