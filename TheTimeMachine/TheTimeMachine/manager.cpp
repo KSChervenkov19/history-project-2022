@@ -1,5 +1,6 @@
 #include "manager.h"
 
+//main class and function bundler
 void manager::cli(ttm::theTimeMachine* mainProcess, data* linkedListData)
 {
 	linkedListData->createNodes();

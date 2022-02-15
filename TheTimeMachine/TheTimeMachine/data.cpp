@@ -1,5 +1,6 @@
 #include "data.h"
 
+//create the linked list
 void data::createNodes()
 {
 	NODE* node1 = new NODE;
@@ -24,7 +25,7 @@ void data::createNodes()
 	NODE* node20 = new NODE;
 
 
-	node1->id = 1;
+	node1->id = convertToGray(1);
 	node1->name = "Battle of Ongal";
 	node1->year = 680;
 	node1->outcome = "Win";
@@ -33,7 +34,7 @@ void data::createNodes()
 	node1->area = "Lesser Scythia\n  Map: https://arcg.is/1H1eCD0";
 	node1->next = node2;
 
-	node2->id = 2;
+	node2->id = convertToGray(2);
 	node2->name = "Battle of Anchialus";
 	node2->year = 708;
 	node2->outcome = "Win";
@@ -42,7 +43,7 @@ void data::createNodes()
 	node2->area = "Lands around Anchialus\n  Map: https://arcg.is/1K5j1f";
 	node2->next = node3;
 
-	node3->id = 3;
+	node3->id = convertToGray(3);
 	node3->name = "Battle of Varbitsa Pass";
 	node3->year = 811;
 	node3->outcome = "Win";
@@ -51,7 +52,7 @@ void data::createNodes()
 	node3->area = "Varbitsa Pass\n  Map: https://arcg.is/0qyC5L";
 	node3->next = node4;
 
-	node4->id = 4;
+	node4->id = convertToGray(4);
 	node4->name = "Siege of Adrianople";
 	node4->year = 813;
 	node4->outcome = "Win";
@@ -60,7 +61,7 @@ void data::createNodes()
 	node4->area = "Adrianople, present Edirne, Turkey\n  Map: https://arcg.is/HynmO";
 	node4->next = node5;
 
-	node5->id = 5;
+	node5->id = convertToGray(5);
 	node5->name = "Battle of Versinikia";
 	node5->year = 814;
 	node5->outcome = "Win";
@@ -69,7 +70,7 @@ void data::createNodes()
 	node5->area = "Versinikia, present Elhovo\n  Map: https://arcg.is/eGifT";
 	node5->next = node6;
 
-	node6->id = 6;
+	node6->id = convertToGray(6);
 	node6->name = "Battle of Pegae";
 	node6->year = 920;
 	node6->outcome = "Win";
@@ -78,7 +79,7 @@ void data::createNodes()
 	node6->area = "Pegae, Byzantine Empire\n  Map: https://arcg.is/04Gq0S";
 	node6->next = node7;
 
-	node7->id = 7;
+	node7->id = convertToGray(7);
 	node7->name = "Battle of the Gates of Trajan";
 	node7->year = 986;
 	node7->outcome = "Win";
@@ -87,7 +88,7 @@ void data::createNodes()
 	node7->area = "The mountain pass Trajan's Gate (Trayanovi vrata), Bulgaria\n  Map: https://arcg.is/15CWr1";
 	node7->next = node8;
 
-	node8->id = 8;
+	node8->id = convertToGray(8);
 	node8->name = "Battle of Thessalonica";
 	node8->year = 995;
 	node8->outcome = "Win";
@@ -96,7 +97,7 @@ void data::createNodes()
 	node8->area = "Thessalonica, Byzantine Empire\n  Map: https://arcg.is/GSzSy3";
 	node8->next = node9;
 
-	node9->id = 9;
+	node9->id = convertToGray(9);
 	node9->name = "Battle of Skopje";
 	node9->year = 1003;
 	node9->outcome = "Loss";
@@ -105,7 +106,7 @@ void data::createNodes()
 	node9->area = "Skopje, present North Macedonia\n  Map: https://arcg.is/0DG9uC";
 	node9->next = node10;
 
-	node10->id = 10;
+	node10->id = convertToGray(10);
 	node10->name = "Battle of Strumica";
 	node10->year = 1014;
 	node10->outcome = "Win";
@@ -114,7 +115,7 @@ void data::createNodes()
 	node10->area = "Between Belasica and Plavush, present-day North Macedonia\n  Map: https://arcg.is/SzGvz";
 	node10->next = node11;
 
-	node11->id = 11;
+	node11->id = convertToGray(11);
 	node11->name = "Battle of Kleidion";
 	node11->year = 1014;
 	node11->outcome = "Loss";
@@ -123,7 +124,7 @@ void data::createNodes()
 	node11->area = "Between Belasica and Ograzden, near present-day village Klyuch in Bulgaria\n  Map: https://arcg.is/0jOaDr";
 	node11->next = node12;
 
-	node12->id = 12;
+	node12->id = convertToGray(12);
 	node12->name = "Battle of Tryavna";
 	node12->year = 1190;
 	node12->outcome = "Win";
@@ -132,7 +133,7 @@ void data::createNodes()
 	node12->area = "Tryavna, Bulgaria\n  Map: https://arcg.is/0SamuK";
 	node12->next = node13;
 
-	node13->id = 13;
+	node13->id = convertToGray(13);
 	node13->name = "Battle of Klokotnitsa";
 	node13->year = 1230;
 	node13->outcome = "Win";
@@ -141,7 +142,7 @@ void data::createNodes()
 	node13->area = "Between the river Klokotnitsa and the village Klokotnitsa\n  Map: https://arcg.is/eGCPv";
 	node13->next = node14;
 
-	node14->id = 14;
+	node14->id = convertToGray(14);
 	node14->name = "Battle of Skafida";
 	node14->year = 1304;
 	node14->outcome = "Win";
@@ -150,7 +151,7 @@ void data::createNodes()
 	node14->area = "Near Burgas, Bulgaria\n  Map: https://arcg.is/eueu90";
 	node14->next = node15;
 
-	node15->id = 15;
+	node15->id = convertToGray(15);
 	node15->name = "Battle of Rusokastro";
 	node15->year = 1332;
 	node15->outcome = "Win";
@@ -159,7 +160,7 @@ void data::createNodes()
 	node15->area = "Near Rusokastro\n  Map: https://arcg.is/1Guy1L0";
 	node15->next = node16;
 
-	node16->id = 16;
+	node16->id = convertToGray(16);
 	node16->name = "April Uprising";
 	node16->year = 1876;
 	node16->outcome = "Loss";
@@ -168,7 +169,7 @@ void data::createNodes()
 	node16->area = "Tarnovo, Sliven, Vratsa, Plovdiv (and the nearby villages)\n  Map: https://arcg.is/Kzer0";
 	node16->next = node17;
 
-	node17->id = 17;
+	node17->id = convertToGray(17);
 	node17->name = "Battle of Shipka Pass";
 	node17->year = 1877;
 	node17->outcome = "Win";
@@ -177,7 +178,7 @@ void data::createNodes()
 	node17->area = "Shipka Pass\n  Map: https://arcg.is/1bLu4j";
 	node17->next = node18;
 
-	node18->id = 18;
+	node18->id = convertToGray(18);
 	node18->name = "Serbo-Bulgarian War";
 	node18->year = 1885;
 	node18->outcome = "Win";
@@ -186,7 +187,7 @@ void data::createNodes()
 	node18->area = "Nish (present-day Serbia), Vidin, Pirot, Dragoman, Tsaribrod (Dimitrovgrad), Slivnitsa\n  Map: https://arcg.is/1zavSW0";
 	node18->next = node19;
 
-	node19->id = 19;
+	node19->id = convertToGray(19);
 	node19->name = "Balkan War";
 	node19->year = 1912;
 	node19->outcome = "Win";
@@ -195,21 +196,21 @@ void data::createNodes()
 	node19->area = "In many cities and terriroies in the Balkans\n  Map: https://arcg.is/1yKqm40";
 	node19->next = node20;
 
-	node20->id = 20;
+	node20->id = convertToGray(20);
 	node20->name = "World War 1";
 	node20->year = 1914;
 	node20->outcome = "Loss";
 	node20->description = "Central Powers (Germany, Italy, Austria-Hungary) against the Entente";
 	node20->reason = "Bulgaria joined the war after being promised territorial compensation from the Central Powers";
 	node20->area = "Most of Bulgaria's military campaigns during World War I took place around the border of the country\n  Map: https://arcg.is/10vrbO";
-	node20->next = NULL;
+	node20->next = nullptr;
 
 	head = node1;
 	tail = node20;
 
 	getData();
 
-	while (node1 != NULL)
+	while (node1 != nullptr)
 	{
 		events.push_back(node1);
 		node1 = node1->next;
@@ -217,9 +218,10 @@ void data::createNodes()
 
 }
 
+//delete linked list
 void data::deleteNodes()
 {
-	while (head != NULL)
+	while (head != nullptr)
 	{
 		old = head;
 		head = head->next;
@@ -227,6 +229,7 @@ void data::deleteNodes()
 	}
 }
 
+//display all event's names
 void data::displayNames()
 {
 	for (NODE* event : events)
@@ -235,6 +238,22 @@ void data::displayNames()
 	}
 }
 
+//display all events
+void data::displayAll()
+{
+	for (NODE* event : events)
+	{
+		std::cout << "  Name: " << event->name << "\n";
+		std::cout << "  Year: " << event->year << "\n";
+		std::cout << "  Description: " << event->description << "\n";
+		std::cout << "  Reason: " << event->reason << "\n";
+		std::cout << "  Outcome: " << event->outcome << "\n";
+		std::cout << "  Area: " << event->area << "\n";
+		std::cout << "\n";
+	}
+}
+
+//display specific event by year
 void data::findEventByYear(int year)
 {
 	closestYear = INT_MAX;
@@ -267,6 +286,7 @@ void data::findEventByYear(int year)
 	found = false;
 }
 
+//display specific event by name
 void data::findEventByName(std::string name)
 {
 	for (NODE* event : events)
@@ -290,6 +310,7 @@ void data::findEventByName(std::string name)
 	found = false;
 }
 
+//display specific event by outcome
 void data::findEventByOutcome(std::string outcome)
 {
 	for (NODE* event : events)
@@ -313,6 +334,7 @@ void data::findEventByOutcome(std::string outcome)
 	found = false;
 }
 
+//add custom event into external file in "data/listData.data"
 void data::addData(std::vector <std::string> eventParams)
 {
 	manageData.open("../../data/listData.data", std::ios::app);
@@ -327,6 +349,7 @@ void data::addData(std::vector <std::string> eventParams)
 	createNodes();
 }
 
+//read from the external file in "data/listData.data and add the data into strings
 void data::getData()
 {
 	manageData.open("../../data/listData.data", std::fstream::in);
@@ -345,6 +368,7 @@ void data::getData()
 	manageData.close();
 }
 
+//add new node from the external data
 void data::addNode(std::string name, int year, std::string outcome, std::string description, std::string reason)
 {
 	NODE* addEvent = new NODE;
@@ -353,8 +377,22 @@ void data::addNode(std::string name, int year, std::string outcome, std::string 
 	addEvent->outcome = outcome;
 	addEvent->description = description;
 	addEvent->reason = reason;
-	addEvent->next = NULL;
+	addEvent->next = nullptr;
 
 	tail->next = addEvent;
 	tail = tail->next;
+}
+
+//delete custom nodes
+void data::deleteCustomList()
+{
+	std::remove("../../data/listData.data");
+	deleteNodes();
+	createNodes();
+}
+
+//use of gray's code
+int data::convertToGray(int num)
+{
+	return num ^ (num >> 1);
 }

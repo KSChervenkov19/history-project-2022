@@ -1,6 +1,10 @@
 #pragma once
 
 #pragma region std_includes
+// O------------------------------------------------------------------------------O
+// | STANDARD INCLUDES                                                            |
+// O------------------------------------------------------------------------------O
+
 #include <iostream>
 #include <vector>
 #include <string>
@@ -41,10 +45,13 @@ class data
 		void createNodes();
 		void deleteNodes();
 		void displayNames();
+		void displayAll();
 		void findEventByYear(int year);
 		void findEventByName(std::string name);
 		void findEventByOutcome(std::string outcome);
 		void addData(std::vector <std::string> eventParams);
 		void getData();
 		void addNode(std::string name, int year, std::string outcome, std::string description, std::string reason);
+		void deleteCustomList();
+		int convertToGray(int num);
 };
