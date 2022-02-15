@@ -202,14 +202,14 @@ void data::createNodes()
 	node20->description = "Central Powers (Germany, Italy, Austria-Hungary) against the Entente";
 	node20->reason = "Bulgaria joined the war after being promised territorial compensation from the Central Powers";
 	node20->area = "Most of Bulgaria's military campaigns during World War I took place around the border of the country\n  Map: https://arcg.is/10vrbO";
-	node20->next = NULL;
+	node20->next = nullptr;
 
 	head = node1;
 	tail = node20;
 
 	getData();
 
-	while (node1 != NULL)
+	while (node1 != nullptr)
 	{
 		events.push_back(node1);
 		node1 = node1->next;
@@ -219,7 +219,7 @@ void data::createNodes()
 
 void data::deleteNodes()
 {
-	while (head != NULL)
+	while (head != nullptr)
 	{
 		old = head;
 		head = head->next;
@@ -367,7 +367,7 @@ void data::addNode(std::string name, int year, std::string outcome, std::string 
 	addEvent->outcome = outcome;
 	addEvent->description = description;
 	addEvent->reason = reason;
-	addEvent->next = NULL;
+	addEvent->next = nullptr;
 
 	tail->next = addEvent;
 	tail = tail->next;
