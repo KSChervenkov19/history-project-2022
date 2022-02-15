@@ -15,23 +15,23 @@
 
 ## About❓
 
-Our project contains **Cisco-style command line interface about Bulgaria's most significant battles.**
+Our project contains a program with **Cisco-style command line interface about Bulgaria's most significant battles.**
 
 ## Used for creation🔧
 
 * *Visual studio* - for the code
 
-* *Visual studio code* - for sorting the code and creating README
+* *Visual studio code* - for sorting the code and creating the README
 
-* *Git hub* - commiting the project ad sharing it
+* *GitHub* - for commiting the project and sharing it
 
-* *Photoshop* - for creating logo and images 
+* *Photoshop* - for creating the logo 
 
-* *Word and PowerPoint* - for creating documentation and presentation
+* *Word and PowerPoint* - for creating the documentation and presentation
 
 * *ArcGis* - for creating the maps
 
-* *Discord* - comunication
+* *Teams* - for comunication
 
 ## Team👋
 
