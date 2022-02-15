@@ -1,5 +1,6 @@
 #include "data.h"
 
+//create the linked list
 void data::createNodes()
 {
 	NODE* node1 = new NODE;
@@ -217,6 +218,7 @@ void data::createNodes()
 
 }
 
+//delete linked list
 void data::deleteNodes()
 {
 	while (head != nullptr)
@@ -227,6 +229,7 @@ void data::deleteNodes()
 	}
 }
 
+//display all event's names
 void data::displayNames()
 {
 	for (NODE* event : events)
@@ -235,6 +238,7 @@ void data::displayNames()
 	}
 }
 
+//display all events
 void data::displayAll()
 {
 	for (NODE* event : events)
@@ -249,6 +253,7 @@ void data::displayAll()
 	}
 }
 
+//display specific event by year
 void data::findEventByYear(int year)
 {
 	closestYear = INT_MAX;
@@ -281,6 +286,7 @@ void data::findEventByYear(int year)
 	found = false;
 }
 
+//display specific event by name
 void data::findEventByName(std::string name)
 {
 	for (NODE* event : events)
@@ -304,6 +310,7 @@ void data::findEventByName(std::string name)
 	found = false;
 }
 
+//display specific event by outcome
 void data::findEventByOutcome(std::string outcome)
 {
 	for (NODE* event : events)
@@ -327,6 +334,7 @@ void data::findEventByOutcome(std::string outcome)
 	found = false;
 }
 
+//add custom event into external file in "data/listData.data"
 void data::addData(std::vector <std::string> eventParams)
 {
 	manageData.open("../../data/listData.data", std::ios::app);
@@ -341,6 +349,7 @@ void data::addData(std::vector <std::string> eventParams)
 	createNodes();
 }
 
+//read from the external file in "data/listData.data and add the data into strings
 void data::getData()
 {
 	manageData.open("../../data/listData.data", std::fstream::in);
@@ -359,6 +368,7 @@ void data::getData()
 	manageData.close();
 }
 
+//add new node from the external data
 void data::addNode(std::string name, int year, std::string outcome, std::string description, std::string reason)
 {
 	NODE* addEvent = new NODE;
@@ -373,6 +383,7 @@ void data::addNode(std::string name, int year, std::string outcome, std::string 
 	tail = tail->next;
 }
 
+//delete custom nodes
 void data::deleteCustomList()
 {
 	std::remove("../../data/listData.data");
@@ -380,6 +391,7 @@ void data::deleteCustomList()
 	createNodes();
 }
 
+//use of gray's code
 int data::convertToGray(int num)
 {
 	return num ^ (num >> 1);

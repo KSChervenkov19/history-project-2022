@@ -13,6 +13,11 @@
 	cisco/switch style typing, help menus, use of other external functions, privilege mode and a bunch of utility
 	types.
 
+	How to use the cli?
+	~~~~~~~~~~~~~
+	If you haven't ever configured a switch or worked with cisco's cli, you
+	can learn the syntax of the application by reading "docs/userGuide.docx"
+
 	Author
 	~~~~~~
 	ttm_team
@@ -35,7 +40,6 @@ namespace ttm
 		//public variables
 		int intYear;
 		const std::string info = "Bulgaria's Battles Time Machine, TTM Software, Version 12.2 (25), RELEASE SOFTWARE (fc1)\nCompiled by ttm_team\n\nPress ENTER to get started!\n\n";
-		std::string prefix = "cli>";
 		std::string str = "";
 		std::string year;
 		std::string name;
@@ -49,10 +53,12 @@ namespace ttm
 		bool startWriting = false;
 		char ch;
 		size_t counter = 0;
+		std::string prefix = "cli>";
 		std::vector<std::string> words;
 		std::stack<std::string> stack;
 
 	public:
+		//main lib.h function for getting line
 		void getLine(data* linkedListData)
 		{
 			std::cout << prefix;
@@ -61,6 +67,8 @@ namespace ttm
 			{
 				ch = _getche();
 				str += ch;
+
+				//checking for menu call
 				if (ch == '?')
 				{
 					typing = false;
@@ -70,6 +78,8 @@ namespace ttm
 					counter = 0;
 					getLine(linkedListData);
 				}
+
+				//checking for backspace/deletion
 				if (ch == '\b')
 				{
 					if (counter > 0)
@@ -89,6 +99,8 @@ namespace ttm
 				{
 					counter++;
 				}
+
+				//checking for new line/executing command
 				if (ch == '\r')
 				{
 					typing = false;
@@ -99,6 +111,8 @@ namespace ttm
 					counter = 0;
 					getLine(linkedListData);
 				}
+
+				//checking for up arrow click
 				if (ch == 72)
 				{
 					counter -= 2;
@@ -109,10 +123,13 @@ namespace ttm
 				}
 			}
 		}
+
+		//typed command checking
 		void getCommand(data* linkedListData)
 		{
 			std::string temp = "";
 			std::string addCommandTemp = "";
+			//devide the string into words via whitespaces
 			for (size_t i = 0; i < str.length(); ++i)
 			{
 				if (str[i] == ' ')
@@ -125,6 +142,7 @@ namespace ttm
 					temp.push_back(str[i]);
 				}
 			}
+			//devide string into words via quotation marks for the add command
 			for (size_t i = 0; i < str.length(); ++i)
 			{
 				if (str[i] == '\"')
@@ -149,6 +167,7 @@ namespace ttm
 			words.push_back(temp);
 			int i = 0;
 			bool globalBreak = false;
+			//check if the command typed is contained in the commands vector
 			for (std::string currentWord : commandsVec)
 			{
 				if (globalBreak) break;
@@ -182,7 +201,8 @@ namespace ttm
 			eventParameters.clear();
 			theTimeMachine::str.clear();
 		}
-
+		
+		//redirect into function depending on the word typed
 		void executeCommand(std::string currentWord, data* linkedListData)
 		{
 			if (currentWord == "enable")
@@ -211,18 +231,21 @@ namespace ttm
 			}
 		}
 
+		//enables privilege mode
 		void enable()
 		{
 			prefix = "cli#";
 			privilege = true;
 		}
 
+		//disables privilege mode
 		void disable()
 		{
 			prefix = "cli>";
 			privilege = false;
 		}
 
+		//search for an event and call the corresponding function
 		void search(data* linkedListData)
 		{
 			if (words.size() > 1)
@@ -284,6 +307,7 @@ namespace ttm
 			}
 		}
 
+		//add new event
 		void add(data* linkedListData)
 		{
 
@@ -297,16 +321,19 @@ namespace ttm
 			}
 		}
 
+		//delete events
 		void deleteEvent(data* linkedListData)
 		{
 			linkedListData->deleteCustomList();
 		}
 
+		//clear the console
 		void clear()
 		{
 			system("cls");
 		}
 
+		//get the last command entered and display it
 		void getLastCommand(data* linkedListData)
 		{
 			if (stack.empty())
@@ -328,10 +355,12 @@ namespace ttm
 			}
 		}
 
+		//display help menu corresponding to the command
 		void getHelp(data* linkedListData)
 		{
 			stack.push(str);
 			std::string temp = "";
+			//devide the string into words via whitespaces
 			for (size_t i = 0; i < str.length(); ++i)
 			{
 				if (str[i] == ' ')
@@ -347,6 +376,7 @@ namespace ttm
 			words.push_back(temp);
 
 			int i = 0;
+			//check if the command typed is contained in the commands vector
 			if (words[0] == "")
 			{
 				for (std::string currentCommand : commandsVec)
@@ -399,6 +429,7 @@ namespace ttm
 			theTimeMachine::str.clear();
 		}
 
+		//redirect into function depending on the word typed
 		void executeHelp(std::string currentWord, data* linkedListData)
 		{
 			if (currentWord == "enable")
@@ -427,16 +458,19 @@ namespace ttm
 			}
 		}
 
+		//display help menu for the enable command
 		void enableHelp()
 		{
 			std::cout << "  <cr>\n";
 		}
 
+		//display help menu for the disable command
 		void disableHelp()
 		{
 			std::cout << "  <cr>\n";
 		}
 
+		//display help menu for the search command depending on the second word
 		void searchHelp(data* linkedListData)
 		{
 			if (words.size() > 1)
@@ -491,6 +525,7 @@ namespace ttm
 			}
 		}
 
+		//display help menu for the add command
 		void addHelp()
 		{
 				if (words.size() > 1)
@@ -503,10 +538,13 @@ namespace ttm
 				}
 		}
 
+		//display help menu for the delete command
 		void deleteHelp()
 		{
 			std::cout << "  <cr>\n";
 		}
+
+		//display help menu for the clear command
 		void clearHelp()
 		{
 			std::cout << "  <cr>\n";
