@@ -9,7 +9,7 @@ namespace ttm
 	{
 	public:
 		const std::vector<std::string> privilegeVec = { "add", "delete" };
-		const std::vector<std::string> commandsVec = { "enable", "disable", "search"};
+		const std::vector<std::string> commandsVec = { "enable", "disable", "search", "clear"};
 
 	public:
 		bool privilege = false;
@@ -183,6 +183,10 @@ namespace ttm
 			{
 				deleteEvent(linkedListData);
 			}
+			else if (currentWord == "clear")
+			{
+				clear();
+			}
 		}
 
 		void enable()
@@ -274,6 +278,11 @@ namespace ttm
 		void deleteEvent(data* linkedListData)
 		{
 			linkedListData->deleteCustomList();
+		}
+
+		void clear()
+		{
+			system("cls");
 		}
 
 		void getLastCommand(data* linkedListData)
@@ -390,6 +399,10 @@ namespace ttm
 			{
 				deleteHelp();
 			}
+			else if (currentWord == "clear")
+			{
+				clearHelp();
+			}
 		}
 
 		void enableHelp()
@@ -470,14 +483,11 @@ namespace ttm
 
 		void deleteHelp()
 		{
-			if (words.size() > 1)
-			{
-				std::cout << "  <cr>\n";
-			}
-			else
-			{
-				std::cout << "  delete\n";
-			}
+			std::cout << "  <cr>\n";
+		}
+		void clearHelp()
+		{
+			std::cout << "  <cr>\n";
 		}
 	};
 }
