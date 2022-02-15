@@ -54,6 +54,7 @@ namespace ttm
 		char ch;
 		size_t counter = 0;
 		std::string prefix = "cli>";
+		std::string regexStr = "";
 		std::vector<std::string> words;
 		std::stack<std::string> stack;
 
@@ -63,6 +64,8 @@ namespace ttm
 		{
 			std::cout << prefix;
 			typing = true;
+			if(regexStr != "") std::cout << regexStr;
+			regexStr = "";
 			while (typing)
 			{
 				ch = _getche();
@@ -120,6 +123,11 @@ namespace ttm
 					str.pop_back();
 					str.pop_back();
 					getLastCommand(linkedListData);
+				}
+
+				if (ch == '\t')
+				{
+					autoComplete(linkedListData);
 				}
 			}
 		}
@@ -548,6 +556,56 @@ namespace ttm
 		void clearHelp()
 		{
 			std::cout << "  <cr>\n";
+		}
+
+		void autoComplete(data* linkedListData)
+		{
+			str.pop_back();
+			std::cout << '\n';
+			counter = 0;
+			std::regex strExpr("(" + str + ")(.*)");
+			if (!privilege)
+			{
+				for (std::string currentCommand : commandsVec)
+				{
+					std::string command(currentCommand);
+					if (std::regex_match(command, strExpr))
+					{
+						regexStr = currentCommand;
+						str = regexStr;
+						stack.push(regexStr);
+						counter = currentCommand.size();
+						getLine(linkedListData);
+					}
+				}
+			}
+			else
+			{
+				for (std::string currentCommand : commandsVec)
+				{
+					std::string command(currentCommand);
+					if (std::regex_match(command, strExpr))
+					{
+						regexStr = currentCommand;
+						str = regexStr;
+						stack.push(regexStr);
+						counter = currentCommand.size();
+						getLine(linkedListData);
+					}
+				}
+				for (std::string currentCommand : privilegeVec)
+				{
+					std::string command(currentCommand);
+					if (std::regex_match(command, strExpr))
+					{
+						regexStr = currentCommand;
+						str = regexStr;
+						stack.push(regexStr);
+						counter = currentCommand.size();
+						getLine(linkedListData);
+					}
+				}
+			}
 		}
 	};
 }
