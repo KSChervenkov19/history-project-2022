@@ -6,7 +6,7 @@
 
 	What is this?
 	~~~~~~~~~~~~~
-	ttm::theTimeMachine is a single file, cisco/switch style based command line interface
+	ttm::theTimeMachine is a cisco/switch style based command line interface
 	It is developed by ttm_team as an assistive tool for their project.
 
 	This file provides the core utility set of the ttm::theTimeMachine, including
@@ -71,7 +71,7 @@ namespace ttm
 				ch = _getche();
 				str += ch;
 
-				//checking for menu call
+				//check for menu call
 				if (ch == '?')
 				{
 					typing = false;
@@ -82,7 +82,7 @@ namespace ttm
 					getLine(linkedListData);
 				}
 
-				//checking for backspace/deletion
+				//check for backspace/deletion
 				if (ch == '\b')
 				{
 					if (counter > 0)
@@ -103,7 +103,7 @@ namespace ttm
 					counter++;
 				}
 
-				//checking for new line/executing command
+				//check for new line/executing command
 				if (ch == '\r')
 				{
 					typing = false;
@@ -115,7 +115,7 @@ namespace ttm
 					getLine(linkedListData);
 				}
 
-				//checking for up arrow click
+				//check for up arrow click
 				if (ch == 72)
 				{
 					counter -= 2;
@@ -125,6 +125,7 @@ namespace ttm
 					getLastCommand(linkedListData);
 				}
 
+				//check for "TAB"
 				if (ch == '\t')
 				{
 					autoComplete(linkedListData);
@@ -239,14 +240,14 @@ namespace ttm
 			}
 		}
 
-		//enables privilege mode
+		//enable privilege mode
 		void enable()
 		{
 			prefix = "cli#";
 			privilege = true;
 		}
 
-		//disables privilege mode
+		//disable privilege mode
 		void disable()
 		{
 			prefix = "cli>";
@@ -322,6 +323,7 @@ namespace ttm
 			if (eventParameters.size() == 5)
 			{
 				linkedListData->addData(eventParameters);
+				std::cout << "% Event added successfully.\n";
 			}
 			else
 			{
@@ -333,6 +335,7 @@ namespace ttm
 		void deleteEvent(data* linkedListData)
 		{
 			linkedListData->deleteCustomList();
+			std::cout << "% Event deleted successfully.\n";
 		}
 
 		//clear the console

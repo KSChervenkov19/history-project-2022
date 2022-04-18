@@ -30,8 +30,8 @@ void data::createNodes()
 	node1->year = 680;
 	node1->outcome = "Win";
 	node1->description = "Bulgaria (with khan Asparuh as leader) against the Byzantine Empire";
-	node1->reason = "Establishing  territory ownership";
-	node1->area = "Lesser Scythia\n  Map: https://arcg.is/1H1eCD0";
+	node1->reason = "Establishing territory ownership";
+	node1->area = "Lesser Scythia\n  Map: https://arcg.is/05jCyb0";
 	node1->next = node2;
 
 	node2->id = convertToGray(2);
@@ -40,7 +40,7 @@ void data::createNodes()
 	node2->outcome = "Win";
 	node2->description = "Bulgaria (with khan Tervel as leader) against the Byzantine Empire";
 	node2->reason = "Bulgaria wishes to aid Justinian II to retake his throne";
-	node2->area = "Lands around Anchialus\n  Map: https://arcg.is/1K5j1f";
+	node2->area = "Lands around Anchialus\n  Map: https://arcg.is/0e8WDu";
 	node2->next = node3;
 
 	node3->id = convertToGray(3);
@@ -49,7 +49,7 @@ void data::createNodes()
 	node3->outcome = "Win";
 	node3->description = "Bulgaria (with khan Krum as leader) against the Byzantine Empire";
 	node3->reason = "Byzantine Empire declares war to expand it's boundaries";
-	node3->area = "Varbitsa Pass\n  Map: https://arcg.is/0qyC5L";
+	node3->area = "Varbitsa Pass\n  Map: https://arcg.is/0KPTia";
 	node3->next = node4;
 
 	node4->id = convertToGray(4);
